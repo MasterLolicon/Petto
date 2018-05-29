@@ -26,7 +26,7 @@ $usuario= $resultado_obtenido['usuario'];
 
 	<div class="container-fluid">
 		<div class="row">
-		<h1>Bienasdsavenido <?php echo $usuario;?></h1>
+		<h1>Bienvenido <?php echo $usuario;?></h1>
 		</div>
 		<div class="row">
 
