@@ -26,7 +26,7 @@
 			        <span class="icon-bar"></span>
 			      </button>
 
-			     <h1><a class="navbar-brand" href="<?php echo($_SERVER['DOCUMENT_ROOT']).'/pag/inicio.php' ?>">Petto</a><h1>
+			     <h1><a class="navbar-brand" href="http://localhost/Petto/pag/inicio.php">Petto</a><h1>
 			    </div>
 
 			    <!-- Collect the nav links, forms, and other content for toggling -->
