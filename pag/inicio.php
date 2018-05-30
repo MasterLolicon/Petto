@@ -21,21 +21,58 @@ $usuario= $resultado_obtenido['usuario'];
 
 <!DOCTYPE html>
 <html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="./css/bootstrap.css"/>
+ <link rel="stylesheet" type="text/css" href="./css/avatar.css">
+ <script type="text/javascript" src="./js/jquery.js"></script>
+ <script type="text/javascript" src="./js/popper.min.js"></script>
+ <script type="text/javascript" src="./js/bootstrap.js"></script>
 
-<?php include('estructura/header.php'); ?>
+<!--barra de navegacion-->
+<nav class="navbar navbar-expand-sm navbar-light fixed-top" style="background-color: orange">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+  <ul class="nav navbar-nav">
+   <li class="nav-item">
+    <a class="nav-link active" href="inicio.php">Inicio</a>
+   </li>
+   <a class="nav-link" href="vistas/mismascotas.php">Mis Mascotas</a>
+   </li>
+   
+   <li class="nav-item">
+    <a class="nav-link" href="vistas/servicios.php">Servicios</a>
+   </li>
+    
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="" id="mascotas" data-toggle="dropdown">Perfil</a>
+     <div class="dropdown-menu ">
+      <a class="dropdown-item" href="vistas/notificaciones.php">Notificaciones</a>
+      <a class="dropdown-item" href="vistas/perfil.php">Configuraci&oacute;n</a>
+      <a class="dropdown-item" href="vistas/ayuda.php">Ayuda</a>
+      <hr style="border-top: 3px double #8c8b8b;">
+      <a class="dropdown-item" href="../conexionbd/desconectar_usuario.php">Cerrar Sesi&oacute;n</a>
+     </div>
+   </li>
+  </ul>
+ </div>
+ </nav>
 
-	<div class="container-fluid">
-		<div class="row">
+<!--contenido-->
+	<div class="container-fluid" style="margin-top: 100px">
+		<div class="jumbtron text-center">
 		<h1>Bienvenido <?php echo $usuario;?></h1>
 		</div>
-		<div class="row">
+		<div class="row float-right	" style="margin-right: 10px">
 
-				<br><a href="vistas/buscarmascota.php" id="buscamas" class="btn btn-primary btn-lg" data-toggle="modal">Buscar Mascota</a>
+				<br><button href="vistas/buscarmascota.php" id="buscamas" class="btn btn-primary" data-toggle="modal">Buscar Mascota</button>
 			</div>
 
 		</div>
-		<div class="row">
-            <div class="col-lg-6 text-center">
+		<div class="row" style="margin-top: 60px">
+            <div class="col-lg-6">
             <h3>Nuevas mascotas disponibles</h3>
 			<?php
 
@@ -46,9 +83,19 @@ $usuario= $resultado_obtenido['usuario'];
 			echo "<table><tr>";
 			while ($fila = mysqli_fetch_array($resultado)) {
 
-					echo "<td>";
-					echo "<img class='img-circle' style='width: 200px; height: 200px' src='/pag/vistas/foto_mascota/$fila[foto]'<br><br>";
+					/*echo "<td>";
+					echo "<img class='img-circle' style='width: 200px; height: 200px' src='vistas/foto_mascota/$fila[foto]'<br><br>";
 					echo "$fila[nombre] <br>";
+*/
+
+					echo "<div class='container' style='margin-top: 5px'>";
+ echo "<div class='container_avatar rounded-circle' style='width: 150px'>";
+  echo "<img src='vistas/foto_mascota/$fila[foto]' alt='Avatar' class='image_avatar rounded-circle' style='width:100%'>";
+  echo "<div class='middle_avatar' style='max-width: 50%; max-height: 50%;'>";
+    echo "<div class='text_avatar'>$fila[nombre] <br>";
+  echo "</div>";
+echo "</div>";
+echo "</div>";
 
 					$contador++;
 
@@ -72,7 +119,7 @@ $usuario= $resultado_obtenido['usuario'];
 			while ($fila = mysqli_fetch_array($resultado)) {
 
 					echo "<td>";
-					echo "<img class='img-circle' style='width: 200px; height: 200px' src='/pag/vistas/foto_mascota/$fila[foto]'<br><br>";
+					echo "<img class='img-circle' style='width: 200px; height: 200px' src='vistas/foto_mascota/$fila[foto]'<br><br>";
 					echo "$fila[nombre] <br>";
 
 					$contador++;

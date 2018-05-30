@@ -15,8 +15,45 @@ if (!$_SESSION){
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="../css/bootstrap.css"/>
+ <script type="text/javascript" src="../js/jquery.js"></script>
+ <script type="text/javascript" src="../js/popper.min.js"></script>
+ <script type="text/javascript" src="../js/bootstrap.js"></script>
 
-<?php include('../estructura/header.php'); ?>
+<!--barra de navegacion-->
+<nav class="navbar navbar-expand-sm navbar-light fixed-top" style="background-color: orange">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+  <ul class="nav navbar-nav">
+   <li class="nav-item">
+    <a class="nav-link" href="../inicio.php">Inicio</a>
+   </li>
+   <a class="nav-link" href="mismascotas.php">Mis Mascotas</a>
+   </li>
+   
+   <li class="nav-item">
+    <a class="nav-link active" href="servicios.php">Servicios</a>
+   </li>
+    
+    <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="" id="mascotas" data-toggle="dropdown">Perfil</a>
+     <div class="dropdown-menu ">
+      <a class="dropdown-item" href="notificaciones.php">Notificaciones</a>
+      <a class="dropdown-item" href="perfil.php">Configuraci&oacute;n</a>
+      <a class="dropdown-item" href="ayuda.php">Ayuda</a>
+      <hr style="border-top: 3px double #8c8b8b;">
+      <a class="dropdown-item" href="../../conexionbd/desconectar_usuario.php">Cerrar Sesi&oacute;n</a>
+     </div>
+   </li>
+  </ul>
+ </div>
+ </nav>
+
+<!--contenido-->
 
 	<div class="container-fluid">
 			<div class="row">
@@ -94,7 +131,7 @@ if (!$_SESSION){
 				echo "<div class='col-md-2'>";
 				echo "<div class='well'>";
 					echo "<div class='card'>";
-						echo "<img class='card-img-top img-fluid img-rounded' style='width: 19rem; height: 15rem;'  src='/pag/vistas/foto_servicio/$fila[foto]'>";
+						echo "<img class='card-img-top img-fluid img-rounded' style='width: 19rem; height: 15rem;'  src='foto_servicio/$fila[foto]'>";
 					echo "<div class='card-block'>";
 						echo "<h4 class='card-title'>$fila[nombre]</h4>";
 						echo "<p class='card-text'>$fila[descripcion] </p>";
