@@ -16,6 +16,8 @@ if (!$_SESSION){
 <!DOCTYPE html>
 <html lang="en">
 
+<meta charset="utf-8">
+
 <?php include('../estructura/header.php'); ?>
 
 	<div class="container-fluid">
