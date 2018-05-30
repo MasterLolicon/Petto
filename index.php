@@ -74,7 +74,7 @@
    <div class="col-sm-4"></div>
   <div class="jumbotron col-sm-4 text-center" style="margin-bottom: 10%; margin-top: 10%; opacity: 0.8;">
   <img src="pag/img/petto.png" style="width: 80%;">
-  <p>Centro de Apoyo a dueños de mascotas</p>
+  <p>Centro de Apuyoy a dueños de mascotas</p>
 
   <button type="button" class="btn btn-primary" onclick="document.getElementById('id01').style.display='block';document.getElementById('page-top').style.overflow='hidden'" style="width:auto;">Entrar</button>
   <button type="button" class="btn btn-primary" onclick="document.getElementById('id02').style.display='block'; document.getElementById('page-top').style.overflow='hidden';" style="width:auto;">Registrarse</button>
