@@ -21,10 +21,10 @@ $usuario= $resultado_obtenido['usuario'];
 
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="utf-8">
+
 <?php include('estructura/header.php'); ?>
 
-	<div class="container-fluid" style="margin-top: 100px">
+	<div class="container-fluid">
 		<div class="row">
 		<h1>Bienvenido <?php echo $usuario;?></h1>
 		</div>

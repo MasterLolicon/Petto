@@ -57,7 +57,7 @@ $avatar= $resultado8_obtenido['avatar'];
 <html lang="en">
 <head>
  
-<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyAzAh8rjxQ-nuIprPl5SA2B3wex9YXKAEI " async="" defer="defer" type="text/javascript"></script>
+<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCbL8ZIBRPVzXFIzjBhyfep9ms49HNe53c" async="" defer="defer" type="text/javascript"></script>
 </head>
 
 <?php include('../estructura/header.php'); ?>
@@ -90,7 +90,6 @@ $avatar= $resultado8_obtenido['avatar'];
         </div>
 				<div class="row">
 					<h2>Mi ubicación</h2>
-					<?php echo $latitud?>
        <div class="col-md-5">
             <?php
             if ($ubicacion=='1') {
@@ -103,7 +102,7 @@ $avatar= $resultado8_obtenido['avatar'];
                 <script type="text/javascript">
                     var output = document.getElementById('map');
 
-                    var imgURL = "https://maps.googleapis.com/maps/api/staticmap?center="+<?php echo $latitud; ?>+","+<?php echo $longitud; ?>+"&size=600x300&markers=color:red%7C"+<?php echo $latitud; ?>+","+<?php echo $longitud; ?>+"&key=AIzaSyAzAh8rjxQ-nuIprPl5SA2B3wex9YXKAEI";
+                    var imgURL = "https://maps.googleapis.com/maps/api/staticmap?center="+<?php echo $latitud; ?>+","+<?php echo $longitud; ?>+"&size=600x300&markers=color:red%7C"+<?php echo $latitud; ?>+","+<?php echo $longitud; ?>+"&key=AIzaSyCbL8ZIBRPVzXFIzjBhyfep9ms49HNe53c";
                      output.innerHTML ="<img src='"+imgURL+"'>";
 
                 </script>

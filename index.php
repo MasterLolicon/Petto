@@ -12,11 +12,9 @@
     <title>Petto</title>
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="pag/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="pag/css/login.css">
-    <script src="pag/js/jquery.js"></script>
-    <script type="text/javascript" src="pag/popper-js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -26,6 +24,12 @@
     <!-- Theme CSS -->
     <link href="css/agency.min.css" rel="stylesheet">
 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" integrity="sha384-0s5Pv64cNZJieYFkXYOTId2HMA2Lfb6q2nAcx2n0RTLUnCAoTTsS0nKEO27XyKcY" crossorigin="anonymous"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
+    <![endif]-->
 <script>
     function validar(){
         if(document.registro.nombre.value.length==0){
@@ -48,129 +52,155 @@
 <body id="page-top" class="index">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #aaccff; z-index:1 ;">
-  <!--<a class="navbar-brand" href="#">Petto</a>-->
-  <a class="navbar-brand" href="">
-    <img src="pag/img/petto.png" alt="logo" style="width: 40px">
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-  <ul class="nav navbar-nav">
-   <li class="nav-item">
-    <a class="nav-link" href="#conoce">Con&oacute;cenos</a>
-   </li>
-   <li class="nav-item">
-    <a class="nav-link" href="#servicio">Servicios</a>
-   </li>  
-  </ul>
- </div>
- </nav>
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <!-- <a class="navbar-brand page-scroll" href="#page-top">Petto</a> -->
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#iniciosesion">Iniciar Sesión</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#conoce">Conoce</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact0">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="pag/inicio.php">Provisional</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
 
     <!-- Header -->
-    <div class="container" style="background-image: url('pag/img/back.jpeg'); background-repeat: no-repeat; background-size: cover; max-width: 100%;max-height: 100%; overflow: auto;" id="main">
-  <div class="row" style="height: 100%;">
-   <div class="col-sm-4"></div>
-  <div class="jumbotron col-sm-4 text-center" style="margin-bottom: 10%; margin-top: 10%; opacity: 0.8;">
-  <img src="pag/img/petto.png" style="width: 80%;">
-  <p>Centro de Apuyoy a dueños de mascotas</p>
-
-  <button type="button" class="btn btn-primary" onclick="document.getElementById('id01').style.display='block';document.getElementById('page-top').style.overflow='hidden'" style="width:auto;">Entrar</button>
-  <button type="button" class="btn btn-primary" onclick="document.getElementById('id02').style.display='block'; document.getElementById('page-top').style.overflow='hidden';" style="width:auto;">Registrarse</button>
-  </div>
-<div>
- </div>
- </div>
- </div>
-
-
-
-<!--registrar-->
-<div id="id02" class="modal" style="padding-top: 5px; overflow: auto;">
-  
-  <form class="modal-content animate" id="registro" name="registro" method="post" action="script_guarda.php" style="width: 50%; margin-left: 28%;">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id02').style.display='none';document.getElementById('page-top').style.overflow='auto';"  class="close" title="Close Modal">&times;</span>
-    </div>
-
-    <div class="container">
-
-      <label for="nombre"><b>Nombre</b></label>
-      <input type="text" class="form-control" placeholder="Nombre" name="nombre" id="nombre" required>
-
-      <label for="apepat"><b>Apellido Paterno</b></label>
-      <input type="text" class="form-control" placeholder="Apellido Paterno" name="apepat" id="apepat" required>
-
-      <label for="apemat"><b>Apellido Materno</b></label>
-      <input type="text" class="form-control" placeholder="Apellido Materno" name="apemat" id="apemat" required>
-
-      <label for="usuario"><b>Nombre de Usuario</b></label>
-      <input type="text" class="form-control" placeholder="Usuario" name="usuario" id="usuario" required>
-
-      <label for="correo"><b>Correo</b></label>
-      <input type="email" class="form-control" placeholder="example@domain.com" name="correo" id="correo" required>
-
-      <label for="contrasenia"><b>Contrase&ntilde;a</b></label>
-      <input type="password" class="form-control" placeholder="Contrase&ntilde;a" name="contrasenia" id="contrasenia" required>
-
-      <label for="ubicacion" style="display: none;"><b>Ubicacion</b></label>
-      <input style="display: none;" type="text" class="form-control" placeholder="ubicacion" name="ubicacion" id="ubicacion" value="1" >
-        
-      <button type="submit" name="enviar" onclick="validar();" class="btn btn-primary">Registrar</button>
-      </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancelar</button>
-    </div>
-  </form>
-</div>
-
-
-<!--login-->
- <div id="id01" class="modal" style="overflow: auto;">
-  
-  <form class="modal-content animate" action="script_acceso_usuario.php" role="form" name="frm_ingreso" method="post" style="width: 50%; margin-left: 28%" >
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none';document.getElementById('page-top').style.overflow='hidden'" class="close" title="Close Modal">&times;</span>
-    </div>
-
-    <div class="container">
-      <label for="usuario"><b>Usuario</b></label>
-      <input type="text" placeholder="Usuario" name="usuario" id="usuario" required>
-
-      <label for="contrasenia" ><b>Contrase&ntilde;a</b></label>
-      <input type="password" placeholder="Contrase&ntilde;a" name="contrasenia" id="contrasenia" required>
-        
-      <button type="submit" class="btn btn-primary" name="Submit">Ingresar</button>
-
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
-<script type="text/javascript">
-  document.onkeydown = function(evt) {
-    evt = evt || window.event;
-    if (evt.keyCode == 27) {
-      document.getElementById("id01").style.display="none";
-      document.getElementById("id02").style.display="none";
-      document.getElementById("page-top").style.overflow="auto";
-    }
-};
-</script>
-
-
-
-
-    <section id="conoce" style="z-index: 0;">
+    <header>
+        <div class="container">
+            <div class="intro-text">
+              <div class="intro-heading">Petto</div>
+                <div class="intro-lead-in">Tener una mascota nunca había sido tan fácil.</div>
+              </br>
+              <div class="well center-block" style="max-width:300px">
+                <a href="#registro" type="button" class="page-scroll btn btn-primary btn-lg btn-block">Empezar</a>
+              </br>
+                <a href="#iniciosesion" type="button" class="page-scroll btn btn-primary btn-lg btn-block">Iniciar Sesión</a>
+              </div>
+            </div>
+        </div>
+    </header>
+<!-- Registro -->
+    <section id="registro">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">¿Quienes somos?</h2>
+                    <h2 class="section-heading">Registrate</h2>
+                    <h3 class="section-subheading text-muted">Solo algunos datos de protocolo.</h3>
+                </div>
+            </div>
+            <div class="col-md-12 text-center">
+                <form role="form" id="registro" name="registro" method="post" action="script_guarda.php">
+                <div class="col-lg-6 text-center">
+                    <p>
+                    <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre"/>
+                    </p>
+                    </br>
+                    <p>
+                    <input class="form-control" type="text" name="apepat" id="apepat" placeholder="Apellido Paterno"/>
+                    </p>
+                    </br>
+                    <p>
+                    <input class="form-control" type="text" name="apemat" id="apemat" placeholder="Apellido Materno"/>
+                    </p>
+                    </br>
+                    <p>
+                    <input class="form-control" type="text" name="usuario" id="usuario" placeholder="Usuario"/>
+                    </p>
+                </div>
+
+                <div class="col-lg-6 text-center">
+                    <p>
+                    <input class="form-control" type="text" name="correo" id="correo" placeholder="Correo electronico"/>
+                    </p>
+                    </br>
+                    <p>
+                    <input class="form-control" type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña"/>
+                    </p>
+                    </br>
+                    <p>
+                    <input class="form-control" type="hidden" name="ubicacion" id="ubicacion"  value="1"/>
+                    </p>
+                </div>
+                <div class="col-lg-4 col-lg-offset-4 text-center">
+                  </br>
+                  </br>
+                  <p>
+                    <input class="btn btn-xl" name="enviar" type="button" value="Registrar!" onclick="validar();">
+                  </p>
+                </div>
+                </form>
+
+
+              </div>
+            </div>
+        </div>
+    </section>
+<!--Inicio de Sesión -->
+    <section id="iniciosesion" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">iniciar Sesión</h2>
+                    <h3 class="section-subheading text-muted">Nos da gusto que estes de vuelta.</h3>
+                </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 text-center">
+
+                <form action="script_acceso_usuario.php" role="form" name="frm_ingreso" method="post">
+                <div class="col-lg-6 col-lg-offset-3 text-center">
+                  <p>
+                    <label class="sr-only" for="usuario">Usuario:</label>
+                    <input class="form-control" type="text" name="correo" id="correo" placeholder="Usuario"/>
+                  </p>
+                </br>
+                  <p>
+                    <label class="sr-only" for="contrasenia">Constraseña:</label>
+                    <input class="form-control" type="password" name="contrasenia" id="contrasenia" placeholder="Contraseña"/>
+                  </p>
+                </div>
+                <div class="col-lg-4 col-lg-offset-4 text-center">
+                  </br>
+                  </br>
+                  <p>
+                    <input class="btn btn-xl" name="Submit" type="submit" value="Iniciar!">
+                  </p>
+                </div>
+                </form>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="conoce">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Conoce</h2>
                     <h3 class="section-subheading text-muted">Esto es lo que tenemos para ti.</h3>
                 </div>
             </div>
@@ -179,33 +209,29 @@
                     <ul class="timeline">
                         <li>
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt=""> 
+                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>Estudiantes de Escom</h4>
+                                    <h4>2009-2011</h4>
                                     <h4 class="subheading">Our Humble Beginnings</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Que desarrollan una plataforma para personas amantes de las mascotas</p>
+                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
                                 </div>
                             </div>
                         </li>
-                        <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Servicios</h2>
-                </div>
-            </div>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
                                 <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4 class="subheading">Adopcion</h4>
+                                    <h4>March 2011</h4>
+                                    <h4 class="subheading">An Agency is Born</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Porque nos preocupamos por todo sobre mascotas, implementamos el servicio de adopcion, para aquellas personas que desean tener su primer mascota, o agrandar su familia</p>
+                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
                                 </div>
                             </div>
                         </li>
@@ -215,11 +241,11 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4 class="subheading">Paseadores</h4>
+                                    <h4>December 2012</h4>
+                                    <h4 class="subheading">Transition to Full Service</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">¿Te preocupan tus compañeros, pero no puedes llevarlos a pasear?<br>
-                                    ¡No te preocupes!, existe un modulo donde puedes contratar a un paseador calificado para dejarlos a su cuidado</p>
+                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
                                 </div>
                             </div>
                         </li>
@@ -229,31 +255,19 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4 class="subheading">Tiendas</h4>
+                                    <h4>July 2014</h4>
+                                    <h4 class="subheading">Phase Two Expansion</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">¿Buscas juguetes, alimentos o algo para tu mascota?<br>Encuentra tambie las tiendas mas cercanas y calificadas</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="subheading">Encuentra pareja para tu mascota</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">¿Buscas que no mascota no este sola?<br>Encuentrales pareja</p>
+                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
                                 </div>
                             </div>
                         </li>
                         <li class="timeline-inverted">
-                            <div class="timeline-image" style="width: 300px;height: 220px">
-                                <h4>¡no dejes pasar mas tiempo!
-                                    <br>Registrate y
-                                    <br>conciente a tu mascota</h4>
+                            <div class="timeline-image">
+                                <h4>Be Part
+                                    <br>Of Our
+                                    <br>Story!</h4>
                             </div>
                         </li>
                     </ul>
@@ -262,7 +276,45 @@
         </div>
     </section>
 
-    
+    <section id="contact0">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Contacto</h2>
+                    <h3 class="section-subheading text-muted">Dinos, que te pareció?</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Tu nombre" id="name" required data-validation-required-message="Por favor, introduce tu nombre.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" placeholder="Tu correo electronico" id="email" required data-validation-required-message="Por favor, introduce tu email.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <textarea class="form-control" placeholder="Tu mensaje" id="message" required data-validation-required-message="Por favor, escribe tu mensaje."></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-xl">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="container">

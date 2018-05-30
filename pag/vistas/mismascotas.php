@@ -14,11 +14,6 @@ if (!$_SESSION){
 ?>
 <!DOCTYPE html>
 <html lang="es">
-<meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" href="../css/bootstrap.css"/>
- <script type="text/javascript" src="../js/jquery.js"></script>
- <script type="text/javascript" src="../js/popper.min.js"></script>
- <script type="text/javascript" src="../js/bootstrap.js"></script>
 
 <?php include('../estructura/header.php'); ?>
 

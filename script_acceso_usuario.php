@@ -1,9 +1,9 @@
 <?php
 //Recibimos los datos enviados desde el formulario
-$usuario= $_POST['usuario'];
+$correo= $_POST['correo'];
 $contrasenia= $_POST['contrasenia'];
 
-if(isset($usuario)){
+if(isset($correo)){
  
 	//Proceso de conexión con la base de datos
 	include("conexionbd/abrir_conexion.php"); 
@@ -12,7 +12,7 @@ if(isset($usuario)){
 	  session_start();
 	
 	//Consultar si los datos son están guardados en la base de datos
-	$consulta= "SELECT * FROM usuarios WHERE usuario='$usuario' AND contrasenia='$contrasenia'"; 
+	$consulta= "SELECT * FROM usuarios WHERE correo='$correo' AND contrasenia='$contrasenia'"; 
 	$resultado= mysqli_query($conexion,$consulta) or die (mysqli_error($conexion));
 	$fila=mysqli_fetch_array($resultado);
 	

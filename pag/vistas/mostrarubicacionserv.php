@@ -26,6 +26,9 @@ if (!$_SESSION){
       #longi{width: 500px;}
       #prueba{width: 500px; height: 200px;}
     </style>
+
+    <!--Claves Google API: AIzaSyCbL8ZIBRPVzXFIzjBhyfep9ms49HNe53c ,  AIzaSyCWQA-N9UZk6E9rc_q1bUjMEGz9KXQwi3w-->
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCbL8ZIBRPVzXFIzjBhyfep9ms49HNe53c" async="" defer="defer" type="text/javascript"></script>
   </head>
   <body >
     <div id="map"></div>
@@ -35,7 +38,7 @@ if (!$_SESSION){
     $longserv=$_GET['longitud'];
 
     ?>
-<img src="../pettologo2.png"> <-Representa la ubicación del servicio
+<img src="http://localhost/pag/pettologo2.png"> <-Representa la ubicación del servicio
 <script>
 
 
@@ -83,7 +86,7 @@ function setMapa (coords)
 
       });
 
-    var image = "../pettologo2.png";
+    var image = 'http://localhost/pag/pettologo2.png';
       marker2 = new google.maps.Marker({
         map: map,
         draggable: true,
@@ -111,7 +114,7 @@ function toggleBounce() {
 
 
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-DIy0Z7d49G6VSXnR1WgQYY5y_EqJSKI&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
  	<div id="prueba"></div>
   </body>
 </html>
