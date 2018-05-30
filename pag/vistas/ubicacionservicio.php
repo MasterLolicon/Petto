@@ -22,8 +22,6 @@ session_start();
       #prueba{width: 500px; height: 200px;}
     </style>
 
-    <!--Claves Google API: AIzaSyCbL8ZIBRPVzXFIzjBhyfep9ms49HNe53c ,  AIzaSyCWQA-N9UZk6E9rc_q1bUjMEGz9KXQwi3w-->
-    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCbL8ZIBRPVzXFIzjBhyfep9ms49HNe53c" async="" defer="defer" type="text/javascript"></script>
   </head>
   <body >
     <div id="map"></div>
@@ -134,7 +132,7 @@ function toggleBounce() {
 
 
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-DIy0Z7d49G6VSXnR1WgQYY5y_EqJSKI&callback=initMap"></script>
  	<div id="prueba"></div>
   </body>
 </html>
