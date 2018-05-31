@@ -1,11 +1,12 @@
 		<head>
 			<meta charset="utf-8">
 			<title>Petto</title>
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" href="./css/bootstrap.css"/>
- <script type="text/javascript" src="./js/jquery.js"></script>
- <script type="text/javascript" src="./js/popper.min.js"></script>
- <script type="text/javascript" src="./js/bootstrap.js"></script>
+			<link rel="shortcut icon" href="favicon.ico">
+			 <meta name="viewport" content="width=device-width, initial-scale=1">
+			 <link rel="stylesheet" href="./css/bootstrap.css"/>
+			 <script type="text/javascript" src="./js/jquery.js"></script>
+			 <script type="text/javascript" src="./js/popper.min.js"></script>
+			 <script type="text/javascript" src="./js/bootstrap.js"></script>
 		</head>
 
 			<body>
@@ -17,9 +18,11 @@
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
   <ul class="nav navbar-nav">
-   <li class="nav-item">
-    <a class="nav-link" href="http://localhost/Petto/pag/inicio.php">Inicio</a>
-   </li>
+
+   <a class="navbar-brand" href="http://localhost/Petto/pag/inicio.php">
+    <img src="http://localhost/Petto/pag/img/petto.png" alt="logo" style="width: 40px">
+  </a>
+  <li>
    <a class="nav-link" href="http://localhost/Petto/pag/vistas/mismascotas.php">Mis Mascotas</a>
    </li>
    
@@ -31,7 +34,7 @@
    </li>
    <li class="n
    <li class="nav-item">
-    <a class="nav-link" href="http://localhost/Petto/pag/vistas/buscarparejamascota.php">Buscar pareja</a>
+    <a class="nav-link" href="http://localhost/Petto/pag/vistas/emparejarmascota.php">Emparejar Mascotas</a>
    </li>
     
     <li class="nav-item dropdown">

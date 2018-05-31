@@ -41,12 +41,12 @@ if (!$_SESSION){
 					    <div class="form-group"> <!-- State Button -->
 					        <label for="state_id" class="control-label"><h4>Tipo:</h4></label>
 					        <select class="form-control" id="tipoop" name="tipoop">
-					            <option value="1">Veterinario</option>
-					            <option value="2">Zona de Paseo</option>
-					            <option value="3">Tienda</option>
-					            <option value="4">Estetica</option>
-					            <option value="5">Entrenador</option>
-					            <option value="6">Paseador</option>
+					            <option value="1">Veterinarios</option>
+					            <option value="2">Zonas de Paseo</option>
+					            <option value="3">Tiendas</option>
+					            <option value="4">Estéticas</option>
+					            <option value="5">Entrenadores</option>
+					            <option value="6">Paseadores</option>
 					        </select>            
 					    </div> 
 				</div>
@@ -84,7 +84,7 @@ if (!$_SESSION){
 	     				<a href="#registrar" class="btn btn-primary btn-lg" data-toggle="modal">Registrar Servicio</a>     
 				</div> 	                     				    
 				</form>
-			<div class="container" style="margin-top: 30px">
+			<div class="container" style="margin-top: 20px; margin-left: 2%;">
 			<!--<div class="col-md-12">	-->	
 			<?php 
 			include($_SERVER['DOCUMENT_ROOT']."/conexionbd/abrir_conexion.php"); 
@@ -93,25 +93,52 @@ if (!$_SESSION){
 			session_start();
 			$id_usuario= $_SESSION['id_usuario'];
 			$orden = 'id_servicio DESC';
-			$query = "SELECT * FROM servicio order by $orden ";
+
+
+#Despliegue de servicios
+
+		for($tipocam=0;$tipocam<7;$tipocam++){
+			$query = "SELECT * FROM servicio WHERE tipo='$tipocam' order by $orden LIMIT 6";#Separacion por tipo
 			$resultado=mysqli_query($conexion,$query) or die(mysqli_error($conexion));
 
 			$contador = 0; //cuenta el numero de mascotas
 			$tar = 0;
 			//echo "<div class='container'>";
+			echo "<h2 class='display-4'>";
+			if ($tipocam==1) {
+					echo "Veterinario</h2>";
+				}
+				elseif($tipocam==2) {
+					echo "Zona de paseo</h2>";
+				}
+				elseif($tipocam==3) {
+					echo "Tienda</h2>";
+				}
+				elseif($tipocam==4) {
+					echo "Estética</h2>";
+				}
+				elseif($tipocam==5) {
+					echo "Entrenador</h2>";
+				}
+				elseif($tipocam==5) {
+					echo "Entrenador</h2>";
+				}
+				elseif($tipocam==6) {
+					echo "Paseador</h2>";
+				}
+
 			while ($fila = mysqli_fetch_array($resultado)) {
 
 				//echo "<div class='col-md-2'>";
 				//echo "<div class='well'>";
 					//echo "<div class='card'>";
-
 				echo "<div class='container_avatar img-thumbnail text-center'>";
-						echo "<img class='img_avatar img-thumbnail' style='width: 400px; height: 500px;'  src='foto_servicio/$fila[foto]'>";
+						echo "<img class='img_avatar img-thumbnail' style='width: 310px; height: 310px;'  src='foto_servicio/$fila[foto]'>";
 					echo "<div class='middle_avatar' style='width: 90%; max-height: 90%;margin-top: -5px'>";
 				echo "<div class='text_avatar'>";
 						echo "<h4 class='card-title'>$fila[nombre]</h4>";
 						echo "<p class='card-text'>$fila[descripcion] </p>";
-						echo "<p class='card-text'>Tipo:";
+			?><!--	echo "<p class='card-text'>Tipo:";
 				if ($fila[tipo]==1) {
 					echo "Veterinario</p>";
 				}
@@ -132,7 +159,7 @@ if (!$_SESSION){
 				}
 				elseif($fila[tipo]==6) {
 					echo "Paseador</p>";
-				}
+				} --><?php
 					echo "<p class='card-text'>Contacto: $fila[contacto]</p>";
 					echo "<p class='card-text'>Calificación:</p>" ;
 					echo "<h3 style='color: #e5ff00;'>";for($i=1;$i<$fila[promcal];$i++){
@@ -167,10 +194,15 @@ if (!$_SESSION){
 				if($contador == 5){
 					$contador = 0;
 				}*/
+			}
 		}
 	?>
 			</div>
 		</div>
+
+
+
+<!-- REGISTRAR SERVICIO-->
 	<div class="modal fade" id="registrar">
         	<div class="modal-dialog">
         		<div class="modal-content">
