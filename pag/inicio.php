@@ -89,7 +89,7 @@ echo "</div>";
 			echo "<table><tr>";
 			while ($fila = mysqli_fetch_array($resultado)) {
 
-     echo "<div class='container_avatar rounded-circle' style='width: 200px;height:200px'>";
+					echo "<div class='container_avatar rounded-circle' style='width: 200px;height:200px'>";
      echo "<img src='vistas/foto_mascota/$fila[foto]' alt='Avatar' class='image_avatar rounded-circle' style='width:100%;height:100%; background-size: cover'>";
      echo "<div class='middle_avatar' style='max-width: 50%; max-height: 50%;'>";
      echo "<div class='text_avatar' style='font-size: 150%'>$fila[nombre] <br>";

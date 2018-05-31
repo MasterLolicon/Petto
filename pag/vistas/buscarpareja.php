@@ -17,6 +17,7 @@ if (!$_SESSION){
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="../css/bootstrap.css"/>
+ <link rel="stylesheet" type="text/css" href="../css/paseador.css">
  <script type="text/javascript" src="../js/jquery.js"></script>
  <script type="text/javascript" src="../js/popper.min.js"></script>
  <script type="text/javascript" src="../js/bootstrap.js"></script>
@@ -28,7 +29,7 @@ if (!$_SESSION){
 
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-3">
+			<div class="col-md-12" style="margin-top: 60px;background-color: ">
 			<?php $mascota =$_POST['mascota'];  
 			echo "<h1>Buscar pareja para $mascota</h1>";
 			?>
@@ -89,8 +90,10 @@ if (!$_SESSION){
 
 				if ($fila[id]!=$id_usuario) {
 					echo "<td>";
-					echo "<img class='img-circle' style='width: 200px; height: 200px' src='foto_mascota/$fila[foto]'<br><br>";
-					echo "Nombre: $fila[nombre] <br>";
+ 				echo "<div class='container_avatar img-thumbnail text-center'>";
+					echo "<img class='img_avatar img-thumbnail' style='width: 400px; height: 400px' src='foto_mascota/$fila[foto]'>";
+ 				echo "<div class='middle_avatar' style='width: 90%; max-height: 90%;margin-top: -25px'>";
+					echo "<div class='text_avatar'>";
 					echo "Tipo:";
 					if ($fila[tipo]==1) {
 						echo "Perro<br>";
@@ -113,11 +116,11 @@ if (!$_SESSION){
 					<input class='form-control' type='hidden' name='tipo' id='tipo' value='2' />
 					<input class='form-control' type='hidden' name='emisor' id='emisor' value='$fila[id]' />
 					<input class='form-control' type='hidden' name='mascotaemisor' id='mascotaemisor' value='$id_mascotaemisor' />
-					<input class='btn btn-xl' name='Submit' type='submit' value='<3'>
-					</form>";
+					<input class='btn' style='background-color: #fc92f9' name='Submit' type='submit' value='<3'>
+					</form></div></div>$fila[nombre] </td>";
 					$contador++;
 
-					if ($contador>4) {
+					if ($contador==4) {
 						echo "</tr><tr>";
 						$contador = 0;
 					}

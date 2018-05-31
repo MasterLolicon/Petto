@@ -16,6 +16,7 @@ if (!$_SESSION){
 <html lang="es">
 <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="../css/bootstrap.css"/>
+ <link rel="stylesheet" type="text/css" href="../css/paseador.css">
  <script type="text/javascript" src="../js/jquery.js"></script>
  <script type="text/javascript" src="../js/popper.min.js"></script>
  <script type="text/javascript" src="../js/bootstrap.js"></script>
@@ -56,8 +57,10 @@ if (!$_SESSION){
 			while ($fila = mysqli_fetch_array($resultado)) {
 
 				echo "<td>";
-				echo "<img class='img-circle' style='width: 200px; height: 200px' src='foto_mascota/$fila[foto]'<br><br>";
-				echo "Nombre: $fila[nombre] <br>";
+				echo "<div class='container_avatar img-thumbnail text-center'>";
+				echo "<img class='img_avatar img-thumbnail' style='width: 400px; height: 400px' src='foto_mascota/$fila[foto]'>";
+				echo "<div class='middle_avatar' style='width: 90%; max-height: 90%;margin-top: -25px'>";
+				echo "<div class='text_avatar'>";
 				echo "Especie:";
 				if ($fila[tipo]==1) {
 					echo "Perro<br>";
@@ -84,9 +87,8 @@ if (!$_SESSION){
 				}
 				echo "<form action='dispadop.php' role='form' name='frm_ingreso' method='post'>
 				<input class='form-control' type='hidden' name='mascota' id='mascota' value='$fila[id_mascota]' />
-				<input class='btn btn-xl' name='Submit' type='submit' value='Cambiar estado'>
+				<input class='btn btn-primary' name='Submit' type='submit' value='Cambiar estado'>
 				</form>";
-
 				echo "<br>Reproducción:";
 				if ($fila[disp_rep]==1) {
 					echo "No";
@@ -94,31 +96,33 @@ if (!$_SESSION){
 				elseif($fila[disp_rep]==2) {
 					echo "Si";
 				}
-				echo "<table><tr><td><form action='disprep.php' role='form' name='frm_ingreso' method='post'>
+				echo "<form action='disprep.php' role='form' name='frm_ingreso' method='post'>
 				<input class='form-control' type='hidden' name='mascota' id='mascota' value='$fila[id_mascota]' />
-				<input class='btn btn-xl' name='Submit' type='submit' value='Cambiar Estado'>
-				</form></td><td>&nbsp;&nbsp;</td>";
+				<input class='btn btn-primary' name='Submit' type='submit' value='Cambiar Estado'>
+				</form>&nbsp;&nbsp;";
 
+				if($fila[disp_rep]==2){
 
-				echo "<td><form action='buscarpareja.php' role='form' name='frm_ingreso' method='post'>
-				<input class='form-control' type='hidden' name='mascota' id='mascota' value='$fila[nombre]' />
-				<input class='form-control' type='hidden' name='mascota_id' id='mascota_id' value='$fila[id_mascota]' />
-				<input class='form-control' type='hidden' name='sexo' id='sexo' value='$fila[sexo]' />
-				<input class='form-control' type='hidden' name='tipo' id='tipo' value='$fila[tipo]' />
-				<input class='form-control' type='hidden' name='raza' id='raza' value='$fila[raza]' />
+				 echo "<form action='buscarpareja.php' role='form' name='frm_ingreso' method='post'>
+				 <input class='form-control' type='hidden' name='mascota' id='mascota' value='$fila[nombre]' />
+				 <input class='form-control' type='hidden' name='mascota_id' id='mascota_id' value='$fila[id_mascota]' />
+				 <input class='form-control' type='hidden' name='sexo' id='sexo' value='$fila[sexo]' />
+				 <input class='form-control' type='hidden' name='tipo' id='tipo' value='$fila[tipo]' />
+				 <input class='form-control' type='hidden' name='raza' id='raza' value='$fila[raza]' />
 
+				
 
-
-				<input class='btn btn-xl' name='Submit' type='submit' value='Buscar pareja'>
-				</form></td></tr></table>";
-
+			 	<input class='btn' style='background-color: #ff84fc' name='Submit' type='submit' value='Buscar pareja'>
+			 	</form>";
+			 }
 				echo "<br><form action='borrarmascota.php' role='form' name='frm_ingreso' method='post'>
 				<input class='form-control' type='hidden' name='mascota' id='mascota' value='$fila[id_mascota]' />
-				<input class='btn btn-xl' name='Submit' type='submit' value='Borrar'>
-				</form></td><td>&nbsp;&nbsp;";
+				<input class='btn btn-danger' name='Submit' type='submit' value='Borrar'>
+				</form></div></div><a class='btn btn-info'>$fila[nombre]</a></td>&nbsp;&nbsp;</td>";
 
 				$contador++;
-				if ($contador>4) {
+
+				if ($contador==4) {
 					echo "</tr><tr>";
 					$contador = 0;
 				}
