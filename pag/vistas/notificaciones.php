@@ -28,13 +28,12 @@ if (!$_SESSION){
 <!--contenido-->
 
 	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-3">
+			<div class="jumbotron text-center" style="justify-content: center;padding-bottom: 5px;">
 				<h1>Notificaciones</h1>
-			</div>
+
 		</div>
 
-		<div class="row">
+		<div class="col-md-12">
 
 
 		<?php 
@@ -55,7 +54,6 @@ if (!$_SESSION){
 			$resultado=mysqli_query($conexion,$query) or die(mysqli_error($conexion));
 			$contador=0; //cuenta el numero de mascotas
 
-			echo "<table><tr>";
 			while ($fila = mysqli_fetch_array($resultado)) {
 
 
@@ -80,11 +78,11 @@ if (!$_SESSION){
 					$resultado8_obtenido=mysqli_fetch_array($resultado8);
 					$disprep= $resultado8_obtenido['disp_rep'];
 
-					echo "<td>";
-					echo "El usuario $fila[nombre] $fila[apepat] $fila[apemat] <br>Ha solicitado para";
+					echo "<div class='jumbotron' style='padding-bottom: 20px;padding-top:5px'>";
+					echo "El usuario $fila[nombre] $fila[apepat] $fila[apemat] Ha solicitado para";
 					if ($fila[tipo]==1) {
-						echo " adopción";
-						echo "<br>A tu mascota $mascota";
+						echo " <span class='label label-primary'>adopción</span>";
+						echo " A tu mascota $mascota";
 						if ($dispadop==2) {
 							echo "<form action='aceptarnotificacion.php' role='form' name='frm_ingreso' method='post'>
 								<input class='form-control' type='hidden' name='mascota' id='mascota' value='$fila[mascota]' />
@@ -92,7 +90,7 @@ if (!$_SESSION){
 								<input class='form-control' type='hidden' name='tipotra' id='tipotra' value='1' />
 								<input class='btn btn-xl' name='Submit' type='submit' value='Aceptar'>
 								</form>";
-							echo "</td>";
+							//echo "</td>";
 							}
 						elseif ($dispadop==1) {
 							echo "<br>Mascota ya no disponible";
@@ -116,32 +114,34 @@ if (!$_SESSION){
 								<input class='form-control' type='hidden' name='tipotra' id='tipotra' value='2' />
 								<input class='btn btn-xl' name='Submit' type='submit' value='Aceptar'>
 								</form>";
-							echo "</td>";
+							//echo "</td>";
 							}
 						elseif ($disprep==1) {
-							echo "<br>Mascota ya no disponible para reproduccion";
+							echo "<br><span class='label label-danger'>Mascota ya no disponible para reproduccion</span>";
 						}
 					}
 	
 
 					$contador++;
-			}echo "</tr></table>";
+			}//echo "</tr></table>";
 			if ($contador==1) {
-				echo "<br>1 Notificación";
+				echo "<br><span class='label label-info'>1 Notificación</span>";
 			}
 			elseif ($contador>1) {
 				echo "<br>$contador Notificaciones";
 			}
 			
 			?>
-		</div>	
 
-		<div class="row">
-			<div class="col-md-3">
-				<h3>Aceptado</h3>
+		
+
+		
+			<div class="col-md-2 float-right" style="justify-content: center;">
+				<h3 class="btn-success" >Aceptado</h3>
 			</div>
-		</div>		
-		<div class="row">
+			
+	</div></div>
+		<div class="jumbotron">
 
 		<?php 
 			include($_SERVER['DOCUMENT_ROOT']."/conexionbd/abrir_conexion.php"); 
@@ -154,7 +154,7 @@ if (!$_SESSION){
 			$resultado=mysqli_query($conexion,$query) or die(mysqli_error($conexion));
 			$contador=0; //cuenta el numero de mascotas
 
-			echo "<table><tr>";
+			//echo "<table><tr>";
 			while ($fila = mysqli_fetch_array($resultado)) {
 
 					//nombre usuario
@@ -165,15 +165,15 @@ if (!$_SESSION){
 					$nombreus= $resultado6_obtenido['nombre'];
 
 
-					echo "<td>";
+					//echo "<td>";
 					echo "El usuario $nombreus Ha a aceptado tu solicitud para su mascota $fila[mascota]<br>";
 					echo "Contactate con el: $fila[correo]";
 
 					$contador++;
-			}echo "</tr></table>";
+			}//echo "</tr></table>";
 
 			if ($contador==1) {
-				echo "<br>1 Notificación";
+				echo "<br><span class='label label-info' >1 Notificación</span>";
 			}
 			elseif ($contador>1) {
 				echo "<br>$contador Notificaciones";
