@@ -57,7 +57,7 @@ $avatar= $resultado8_obtenido['avatar'];
 <html lang="en">
 <head>
  
-<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCbL8ZIBRPVzXFIzjBhyfep9ms49HNe53c" async="" defer="defer" type="text/javascript"></script>
+<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyAzAh8rjxQ-nuIprPl5SA2B3wex9YXKAEI " async="" defer="defer" type="text/javascript"></script>
 </head>
 
 <meta charset="utf-8">
@@ -68,35 +68,7 @@ $avatar= $resultado8_obtenido['avatar'];
  <script type="text/javascript" src="../js/bootstrap.js"></script>
 
 <!--barra de navegacion-->
-<nav class="navbar navbar-expand-sm navbar-light fixed-top" style="background-color: orange">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-  <ul class="nav navbar-nav">
-   <li class="nav-item">
-    <a class="nav-link" href="../inicio.php">Inicio</a>
-   </li>
-   <a class="nav-link" href="mismascotas.php">Mis Mascotas</a>
-   </li>
-   
-   <li class="nav-item">
-    <a class="nav-link active" href="servicios.php">Servicios</a>
-   </li>
-    
-    <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="" id="mascotas" data-toggle="dropdown">Perfil</a>
-     <div class="dropdown-menu ">
-      <a class="dropdown-item" href="vistas/notificaciones.php">Notificaciones</a>
-      <a class="dropdown-item" href="vistas/perfil.php">Configuraci&oacute;n</a>
-      <a class="dropdown-item" href="vistas/ayuda.php">Ayuda</a>
-      <hr style="border-top: 3px double #8c8b8b;">
-      <a class="dropdown-item" href="conexionbd/desconectar_usuario.php">Cerrar Sesi&oacute;n</a>
-     </div>
-   </li>
-  </ul>
- </div>
- </nav>
+<?php include('../estructura/header.php'); ?>
 
 <!--contenido-->
 
@@ -114,7 +86,7 @@ $avatar= $resultado8_obtenido['avatar'];
             </div>
             <div class="col-md-6">
 							<h2>Avatar</h2>
-                <div class="col-md-4"><img class="img-circle" style="width: 200px; height: 200px" src='/pag/vistas/avatars/<?php echo $avatar; ?>'></div>
+                <div class="col-md-4"><img class="img-circle" style="width: 200px; height: 200px" src='avatars/<?php echo $avatar; ?>'></div>
 								<div class="col-md-7">
 								<div class="well">
 									<form action="subiravatar.php" method="post" enctype="multipart/form-data">
@@ -140,7 +112,7 @@ $avatar= $resultado8_obtenido['avatar'];
                 <script type="text/javascript">
                     var output = document.getElementById('map');
 
-                    var imgURL = "https://maps.googleapis.com/maps/api/staticmap?center="+<?php echo $latitud; ?>+","+<?php echo $longitud; ?>+"&size=600x300&markers=color:red%7C"+<?php echo $latitud; ?>+","+<?php echo $longitud; ?>+"&key=AIzaSyCbL8ZIBRPVzXFIzjBhyfep9ms49HNe53c";
+                    var imgURL = "https://maps.googleapis.com/maps/api/staticmap?center="+<?php echo $latitud; ?>+","+<?php echo $longitud; ?>+"&size=600x300&markers=color:red%7C"+<?php echo $latitud; ?>+","+<?php echo $longitud; ?>+"&key=AIzaSyAzAh8rjxQ-nuIprPl5SA2B3wex9YXKAEI";
                      output.innerHTML ="<img src='"+imgURL+"'>";
 
                 </script>

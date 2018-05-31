@@ -21,7 +21,7 @@ session_start();
 
 
 	//Ruta de la carpeta fotoes
-	$carpeta_destino=$_SERVER['DOCUMENT_ROOT']."/pag/vistas/foto_servicio/";
+	$carpeta_destino="foto_servicio/";
 
 	//Validación del archivo
 

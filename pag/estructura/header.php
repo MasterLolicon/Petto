@@ -18,26 +18,26 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
   <ul class="nav navbar-nav">
    <li class="nav-item">
-    <a class="nav-link" href="inicio.php">Inicio</a>
+    <a class="nav-link" href="http://localhost/Petto/pag/inicio.php">Inicio</a>
    </li>
-   <a class="nav-link" href="vistas/mismascotas.php">Mis Mascotas</a>
+   <a class="nav-link" href="http://localhost/Petto/pag/vistas/mismascotas.php">Mis Mascotas</a>
    </li>
    
    <li class="nav-item">
-    <a class="nav-link" href="vistas/servicios.php">Servicios</a>
+    <a class="nav-link" href="http://localhost/Petto/pag/vistas/servicios.php">Servicios</a>
    </li>
    <li class="nav-item">
-    <a class="nav-link" href="tinder.html">Buscar pareja</a>
+    <a class="nav-link" href="http://localhost/Petto/pag/vistas/buscarparejamascota.php">Buscar pareja</a>
    </li>
     
     <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="" id="mascotas" data-toggle="dropdown">Perfil</a>
      <div class="dropdown-menu ">
-      <a class="dropdown-item" href="vistas/notificaciones.php">Notificaciones</a>
-      <a class="dropdown-item" href="vistas/perfil.php">Configuraci&oacute;n</a>
-      <a class="dropdown-item" href="vistas/ayuda.php">Ayuda</a>
+      <a class="dropdown-item" href="http://localhost/Petto/pag/vistas/notificaciones.php">Notificaciones</a>
+      <a class="dropdown-item" href="http://localhost/Petto/pag/vistas/perfil.php">Configuraci&oacute;n</a>
+      <a class="dropdown-item" href="http://localhost/Petto/pag/vistas/ayuda.php">Ayuda</a>
       <a role="separator" class="divider">__________________</a>
-      <a class="dropdown-item" href="conexionbd/desconectar_usuario.php">Cerrar Sesi&oacute;n</a>
+      <a class="dropdown-item" href="http://localhost/Petto/conexionbd/desconectar_usuario.php">Cerrar Sesi&oacute;n</a>
      </div>
    </li>
   </ul>

@@ -20,7 +20,7 @@
 
 
 	//Ruta de la carpeta imagenes
-	$carpeta_destino=$_SERVER['DOCUMENT_ROOT']."/pag/vistas/avatars/";
+	$carpeta_destino="avatars/";
 
 	//Validación del archivo
 
@@ -46,6 +46,6 @@
 				    echo "ERROR: Could not able to execute $sql. " . mysqli_error($conexion);
 				}
 
-	header("location:http://localhost/pag/vistas/perfil.php");	
+	header("location:http://localhost/Petto/pag/vistas/perfil.php");	
 
 ?>
