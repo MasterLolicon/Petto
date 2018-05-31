@@ -27,7 +27,7 @@
     <a class="nav-link" href="http://localhost/Petto/pag/vistas/servicios.php">Servicios</a>
    </li>
    <li class="nav-item">
-    <a class="nav-link" href="http://localhost/Petto/pag/vistas/centrodeadopcion.php">Centro de Adopción</a>
+    <a class="nav-link" href="http://localhost/Petto/pag/vistas/buscarmascota.php">Centro de Adopción</a>
    </li>
    <li class="n
    <li class="nav-item">

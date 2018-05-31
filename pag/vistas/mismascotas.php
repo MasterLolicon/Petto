@@ -15,33 +15,30 @@ if (!$_SESSION){
 <!DOCTYPE html>
 <html lang="es">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<?php include('../estructura/header.php'); ?>
  <link rel="stylesheet" href="../css/bootstrap.css"/>
  <link rel="stylesheet" type="text/css" href="../css/paseador.css">
  <script type="text/javascript" src="../js/jquery.js"></script>
  <script type="text/javascript" src="../js/popper.min.js"></script>
  <script type="text/javascript" src="../js/bootstrap.js"></script>
 
-
-<?php include('../estructura/header.php'); ?>
-
 <!--contenido-->
 	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-3">
+		<div class="row" style="margin-top: 80px">
+			<div class="col-md-3" >
 				<h1>Mis Mascotas</h1>
 			</div>
-			<div class="col-md-3">
+			<!--<div class="col-md-3">
 				<h1></h1>
-			</div>
-			<div class="col-md-3">		   	        	
-	            <a href="http://localhost/Petto/pag/vistas/buscarmascota.php" id="buscamas" class="btn btn-primary btn-lg" data-toggle="modal">Buscar Mascota</a>
-	        </div>
-	        <div class="col-md-3">		   	        	
+			</div>-->
+			
+	        <div class="col-md-3" >		   	        	
 	            <a href="#registrar" class="btn btn-primary btn-lg" data-toggle="modal">Registrar Mascota</a>
 	        </div>
 		</div>
 
-		<div class="container">
+		<div class="container-fluid" style="margin-top: 30px;margin-left: ">
 			<?php 
 			include($_SERVER['DOCUMENT_ROOT']."/conexionbd/abrir_conexion.php"); 
 
@@ -57,10 +54,10 @@ if (!$_SESSION){
 			while ($fila = mysqli_fetch_array($resultado)) {
 
 				//echo "<td>";
-				echo "<div class='container_avatar img-thumbnail text-center'>";
-				echo "<img class='img_avatar img-thumbnail' style='width: 400px; height: 400px' src='foto_mascota/$fila[foto]'>";
-				echo "<div class='middle_avatar' style='width: 90%; max-height: 90%;margin-top: -25px'>";
-				echo "<div class='text_avatar'>";
+				echo "<div class='container_avatar img-thumbnail text-center' style='background-image: url(foto_mascota/$fila[foto]);background-size: cover; width: 200px;height:200px'>";
+				//echo "<img class='img_avatar img-thumbnail' style='width: 400px; height: 400px' src='foto_mascota/$fila[foto]'>";
+				echo "<div class='middle_avatar' style='width: 90%; max-height: 90%;margin-top: -5px;'>";
+				echo "<div class='text_avatar' style='opacity: 0.75'>";
 				echo "Especie:";
 				if ($fila[tipo]==1) {
 					echo "Perro<br>";

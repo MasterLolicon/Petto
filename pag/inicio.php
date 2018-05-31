@@ -37,10 +37,6 @@ $usuario= $resultado_obtenido['usuario'];
 		<div class="jumbtron text-center">
 		<h1>Bienvenido <?php echo $usuario;?></h1>
 		</div>
-		<div class="row float-right	" style="margin-right: 10px">
-
-				<br><button href="vistas/buscarmascota.php" id="buscamas" class="btn btn-primary" data-toggle="modal">Buscar Mascota</button>
-			</div>
 
 		</div>
 		<div class="row" style="margin-top: 60px">
