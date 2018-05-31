@@ -37,7 +37,7 @@ if (!$_SESSION){
 			</div>
 		</div>
 
-		<div class="row">
+		<div class="container">
 			<?php 
 			include($_SERVER['DOCUMENT_ROOT']."/conexionbd/abrir_conexion.php"); 
 
@@ -70,7 +70,6 @@ if (!$_SESSION){
 
 
 
-			echo "<table><tr>";
 			while ($fila = mysqli_fetch_array($resultado)) {
 
 
@@ -89,7 +88,7 @@ if (!$_SESSION){
 
 
 				if ($fila[id]!=$id_usuario) {
-					echo "<td>";
+					
  				echo "<div class='container_avatar img-thumbnail text-center'>";
 					echo "<img class='img_avatar img-thumbnail' style='width: 400px; height: 400px' src='foto_mascota/$fila[foto]'>";
  				echo "<div class='middle_avatar' style='width: 90%; max-height: 90%;margin-top: -25px'>";
@@ -117,17 +116,12 @@ if (!$_SESSION){
 					<input class='form-control' type='hidden' name='emisor' id='emisor' value='$fila[id]' />
 					<input class='form-control' type='hidden' name='mascotaemisor' id='mascotaemisor' value='$id_mascotaemisor' />
 					<input class='btn' style='background-color: #fc92f9' name='Submit' type='submit' value='<3'>
-					</form></div></div>$fila[nombre] </td>";
+					</form></div></div>$fila[nombre]</div>";
 					$contador++;
 
-					if ($contador==4) {
-						echo "</tr><tr>";
-						$contador = 0;
-					}
 					
 				}
 			}
-			echo "</tr></table>";
 			?>
 		</div>	
 		<div class="row"><p>&nbsp;</p></div>			

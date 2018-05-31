@@ -41,7 +41,7 @@ if (!$_SESSION){
 	        </div>
 		</div>
 
-		<div class="row">
+		<div class="container">
 			<?php 
 			include($_SERVER['DOCUMENT_ROOT']."/conexionbd/abrir_conexion.php"); 
 
@@ -53,10 +53,10 @@ if (!$_SESSION){
 
 			$contador = 0; //cuenta el numero de mascotas
 
-			echo "<table><tr>";
+			//echo "<table><tr>";
 			while ($fila = mysqli_fetch_array($resultado)) {
 
-				echo "<td>";
+				//echo "<td>";
 				echo "<div class='container_avatar img-thumbnail text-center'>";
 				echo "<img class='img_avatar img-thumbnail' style='width: 400px; height: 400px' src='foto_mascota/$fila[foto]'>";
 				echo "<div class='middle_avatar' style='width: 90%; max-height: 90%;margin-top: -25px'>";
@@ -118,16 +118,16 @@ if (!$_SESSION){
 				echo "<br><form action='borrarmascota.php' role='form' name='frm_ingreso' method='post'>
 				<input class='form-control' type='hidden' name='mascota' id='mascota' value='$fila[id_mascota]' />
 				<input class='btn btn-danger' name='Submit' type='submit' value='Borrar'>
-				</form></div></div><a class='btn btn-info'>$fila[nombre]</a></td>&nbsp;&nbsp;</td>";
+				</form></div></div><a class='btn btn-info'>$fila[nombre]</a></div>";
 
 				$contador++;
 
-				if ($contador==4) {
+				/*if ($contador==4) {
 					echo "</tr><tr>";
 					$contador = 0;
-				}
+				}*/
 			}
-			echo "</tr></table>";
+			//echo "</tr></table>";
 			?>
 		</div>
 
