@@ -60,11 +60,10 @@ $usuario= $resultado_obtenido['usuario'];
 					echo "$fila[nombre] <br>";
 */
 
-					echo "<div class='container' style='margin-top: 5px'>";
- echo "<div class='container_avatar rounded-circle' style='width: 150px'>";
-  echo "<img src='vistas/foto_mascota/$fila[foto]' alt='Avatar' class='image_avatar rounded-circle' style='width:100%'>";
+ echo "<div class='container_avatar rounded-circle' style='width: 200px;height:200px'>";
+  echo "<img src='vistas/foto_mascota/$fila[foto]' alt='Avatar' class='image_avatar rounded-circle' style='width:100%;height:100%; background-size: cover'>";
   echo "<div class='middle_avatar' style='max-width: 50%; max-height: 50%;'>";
-    echo "<div class='text_avatar'>$fila[nombre] <br>";
+    echo "<div class='text_avatar' style='font-size: 150%'>$fila[nombre] <br>";
   echo "</div>";
 echo "</div>";
 echo "</div>";
@@ -90,9 +89,13 @@ echo "</div>";
 			echo "<table><tr>";
 			while ($fila = mysqli_fetch_array($resultado)) {
 
-					echo "<td>";
-					echo "<img class='img-circle' style='width: 200px; height: 200px' src='vistas/foto_mascota/$fila[foto]'<br><br>";
-					echo "$fila[nombre] <br>";
+     echo "<div class='container_avatar rounded-circle' style='width: 200px;height:200px'>";
+     echo "<img src='vistas/foto_mascota/$fila[foto]' alt='Avatar' class='image_avatar rounded-circle' style='width:100%;height:100%; background-size: cover'>";
+     echo "<div class='middle_avatar' style='max-width: 50%; max-height: 50%;'>";
+     echo "<div class='text_avatar' style='font-size: 150%'>$fila[nombre] <br>";
+     echo "</div>";
+     echo "</div>";
+     echo "</div>";
 
 					$contador++;
 
