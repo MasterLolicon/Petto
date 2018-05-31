@@ -29,17 +29,17 @@ if (!$_SESSION){
 
 	<div class="container-fluid">
 
-			<div class="row">
-					<h1>Servicios</h1>
-
-			<div class="row">
+			<div class="jumbotron text-center" style="justify-content: center;padding-bottom: 5px">
+					<h1 class="display-3">Servicios</h1>
+			</div>
+			<div class="row text-center" style="justify-content: center">
 			<h3>Busqueda personalizada</h3>
 			</div>
-				<div class="col-md-3">
+				<div class="col-md-3" style="display: inline-block;">
 					
 					<form role="form" id="registro_servicio" name="registro_servicio" method="post"  enctype="multipart/form-data" action="buscarservicio.php">
 
-					    <div class="form-group"> <!-- State Button -->
+					    <div class="form-group" > <!-- State Button -->
 					        <label for="state_id" class="control-label"><h4>Tipo:</h4></label>
 					        <select class="form-control" id="tipoop" name="tipoop">
 					            <option value="1">Veterinario</option>
@@ -51,10 +51,10 @@ if (!$_SESSION){
 					        </select>            
 					    </div> 
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3" style="display: inline-block;">
 					
 	
-					    <div class="form-group"> <!-- State Button -->
+					    <div class="form-group" > <!-- State Button -->
 					        <label for="state_id" class="control-label"><h4>Ordenar por:</h4></label>
 					        <select class="form-control" id="orden" name="orden">
 					            <option value="id_servicio DESC">Más recientes</option>
@@ -62,7 +62,7 @@ if (!$_SESSION){
 					        </select>            
 					    </div> 
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3" style="display: inline-block;">
 					
 	
 					    <div class="form-group"> <!-- State Button -->
@@ -76,19 +76,18 @@ if (!$_SESSION){
 					        </select>            
 					    </div> 
 				</div>
-
-				<div class="col-md-3">
+<br>
+				<div class="col-md-3" style="padding-top: 30px">
 	     				<input class="btn btn-xl" name="Submit" type="submit" value="Busqueda">     
 				</div>  
 				
-				<div class="col-md-3">
+				<div class="col-md-2 float-right" >
 	     				<a href="#registrar" class="btn btn-primary btn-lg" data-toggle="modal">Registrar Servicio</a>     
 				</div>                      				    
 				</form>
-				</div>
-		    </div>
-			<div class="row">
-			<div class="col-md-10">
+				
+			<div class="container" style="padding-top: 50px">
+			<div class="col-md-111">
 			
 			<?php 
 			$id_usuario= $_SESSION['id_usuario'];
