@@ -40,7 +40,7 @@
       <a class="dropdown-item" href="http://localhost/Petto/pag/vistas/notificaciones.php">Notificaciones</a>
       <a class="dropdown-item" href="http://localhost/Petto/pag/vistas/perfil.php">Configuraci&oacute;n</a>
       <a class="dropdown-item" href="http://localhost/Petto/pag/vistas/ayuda.php">Ayuda</a>
-      <a role="separator" class="divider">__________________</a>
+      <hr style="border-top: 3px double #8c8b8b;">
       <a class="dropdown-item" href="http://localhost/Petto/conexionbd/desconectar_usuario.php">Cerrar Sesi&oacute;n</a>
      </div>
    </li>
