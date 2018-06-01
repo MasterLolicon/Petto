@@ -80,17 +80,27 @@ if (!$_SESSION){
 			while ($fila = mysqli_fetch_array($resultado)) {
 
 				//echo "<td>";
-				echo "<div class='container_avatar img-thumbnail text-center' style='background-image: url(foto_mascota/$fila[foto]);background-size: cover; width: 200px;height:200px'>";
+				echo "<div class='container_avatar rounded-circle ' style='background-image: url(foto_mascota/$fila[foto]);background-size: cover; width: 200px;height:200px'>";
 				//echo "<img class='img_avatar img-thumbnail' style='width: 400px; height: 400px' src='foto_mascota/$fila[foto]'>";
-				echo "<div class='middle_avatar' style='width: 90%; max-height: 90%;margin-top: -5px;'>";
-				echo "<div class='text_avatar' style='opacity: 0.75'>";
-				echo "Especie:";
+				echo "<div class='middle_avatar' style='width: 90%; max-height: 90%;margin-top: -5px;'>	";
+				echo "<a class='btn btn-info' style='margin-top: 200px'  href='#datos$contador' data-toggle='modal'>$fila[nombre]</a></div></div>";
+
+
+				echo "<div class='modal fade text-center' id='datos$contador'>";
+				echo "<div class='modal-dialog'>";
+				echo "<div class='modal-content'>";
+				echo "<div class='modal-header'>";
+				echo "<h2 class='modal-title'>$fila[nombre]</h2>";
+				echo "<button tyle='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button></div>";
+				echo "<div class='modal-body'>";
+				echo "<div class='container_avatar rounded-circle ' style='background-image: url(foto_mascota/$fila[foto]);background-size: cover; width: 200px;height:200px'></div><br>";
+				/*echo "Especie:";
 				if ($fila[tipo]==1) {
 					echo "Perro<br>";
 				}
 				elseif($fila[tipo]==2) {
 					echo "Gato<br>";
-				}
+				}*/
 				echo "Raza: $fila[raza] <br>";
 				echo "Edad: $fila[edad] años <br>";
 				echo "Genero: ";
@@ -110,7 +120,7 @@ if (!$_SESSION){
 				}
 				echo "<form action='dispadop.php' role='form' name='frm_ingreso' method='post'>
 				<input class='form-control' type='hidden' name='mascota' id='mascota' value='$fila[id_mascota]' />
-				<input class='btn btn-primary' name='Submit' type='submit' value='Cambiar estado'>
+				<input class='btn btn-primary' name='Submit' type='submit' value='Cambiar estado'/>
 				</form>";
 				echo "<br>Reproducción:";
 				if ($fila[disp_rep]==1) {
@@ -121,7 +131,7 @@ if (!$_SESSION){
 				}
 				echo "<form action='disprep.php' role='form' name='frm_ingreso' method='post'>
 				<input class='form-control' type='hidden' name='mascota' id='mascota' value='$fila[id_mascota]' />
-				<input class='btn btn-primary' name='Submit' type='submit' value='Cambiar Estado'>
+				<input class='btn btn-primary' name='Submit' type='submit' value='Cambiar Estado'/>
 				</form>&nbsp;&nbsp;";
 
 				if($fila[disp_rep]==2){
@@ -135,13 +145,13 @@ if (!$_SESSION){
 
 				
 
-			 	<input class='btn' style='background-color: #ff84fc' name='Submit' type='submit' value='Buscar pareja'>
+			 	<input class='btn' style='background-color: #ff84fc' name='Submit' type='submit' value='Buscar pareja'/>
 			 	</form>";
 			 }
 				echo "<br><form action='borrarmascota.php' role='form' name='frm_ingreso' method='post'>
 				<input class='form-control' type='hidden' name='mascota' id='mascota' value='$fila[id_mascota]' />
 				<input class='btn btn-danger' name='Submit' type='submit' value='Borrar'>
-				</form></div></div><a class='btn btn-info' style='margin-top: 200px'>$fila[nombre]</a></div>";
+				</form></div></div></div></div>";
 
 				$contador++;
 
