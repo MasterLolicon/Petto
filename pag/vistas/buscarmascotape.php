@@ -77,10 +77,10 @@ if (!$_SESSION){
 				<div class="col-md-3" style="display: inline-block;">
 					<div class="form-group"> <!-- Street 1 -->
 					        <label for="street1_id" class="control-label">Raza</label>
-					        <select class="form-control" id="perro" name="raza" disabled="true">
-					        	<option value="Todos">Mostrar todos</option>
-					        	<option value="Ninguna(Cruza)">Ninguna(Cruza)</option>
-					            <option value="Affenpinscher">Affenpinscher</option>
+					  <select class="form-control" id="perro" name="raza" disabled="true">
+					  	<option value="Todos">Mostrar todos</option>
+					  	<option value="Ninguna(Cruza)">Ninguna(Cruza)</option>
+					   <option value="Affenpinscher">Affenpinscher</option>
 								<option value="Afgano">Afgano</option>
 								<option value="Akita">AkitAmerican Bullya</option>
 								<option value="Akita Americano">Akita Americano</option>
@@ -389,12 +389,12 @@ if (!$_SESSION){
 								<option value="Whippet">Whippet</option>
 								<option value="Wolfhound Irlandés">Wolfhound Irlandés</option>
 								<option value="Yorkshire Terrier">Yorkshire Terrier</option>									
-					        </select>
+					  </select>
 
-					        <select class="form-control" id="gato" name="raza" disabled="true" >
-					        	<option value="Todos">Mostrar todos</option>
-					        	<option value="Ninguna(Cruza)">Ninguna(Cruza)</option>
-					            <option value="Abisinio">Abisinio</option>
+					  <select class="form-control" id="gato" name="raza" disabled="true" >
+					  	<option value="Todos">Mostrar todos</option>
+					  	<option value="Ninguna(Cruza)">Ninguna(Cruza)</option>
+					   <option value="Abisinio">Abisinio</option>
 								<option value="Amercian Curl">Amercian Curl</option>
 								<option value="Angora Turco">Angora Turco</option>
 								<option value="Azul Ruso">Azul Ruso</option>
@@ -436,7 +436,7 @@ if (!$_SESSION){
 								<option value="Sphynx">Sphynx</option>
 								<option value="Toyger">Toyger</option>
 								<option value="Van Turco">Van Turco</option>
-					        </select>
+					  </select>
 					    </div>
 	
 				</div>
@@ -492,9 +492,9 @@ if (!$_SESSION){
 			$contador = 0; //cuenta el numero de mascotas
 
 
-			echo "<table><tr>";
+			//echo "<table><tr>";
 			while ($fila = mysqli_fetch_array($resultado)) {
-					echo "<td>";
+					//echo "<td>";
 						
 					$latitude2=$fila[latitud]; //Poner aqui la latitud del servicio/mascota
 					$longitude2=$fila[longitud]; //Poner aqui la longitud del servicio/mascota
@@ -513,10 +513,10 @@ if (!$_SESSION){
 
 					if($d<=$ra AND $fila[tipo]==$especie AND $fila[id]!=$id_usuario){
 
-						echo "<div class='container_avatar img-thumbnail text-center' style=' width: 200px;height:200px'>";
-						echo "<img class='img_avatar img-thumbnail' style='width: 200px; height: 200px' src='foto_mascota/$fila[foto]'<br><br>";
+						echo "<div class='container_avatar rounded-circle' style=' width: 250px;height:250px;'>";
+						echo "<img class='img_avatar rounded-circle' style='width: 250px; height: 250px' src='foto_mascota/$fila[foto]'>";
 						echo "Nombre: $fila[nombre] <br>";
-						echo "<div class='middle_avatar' style='width: 90%; max-height: 90%;margin-top: -5px;'>";
+						echo "<div class='middle_avatar' style='width: 80%; max-height: 80%;margin-top: -5px;'>";
 						echo "<div class='text_avatar' style='opacity: 0.75'>";
 						/*echo "Tipo:";
 						if ($fila[tipo]==1) {
@@ -555,8 +555,11 @@ if (!$_SESSION){
 
 					if($d<=$ra){
 
-						echo "<img style='width: 200px; height: 200px' src='/pag/vistas/foto_mascota/$fila[foto]'<br><br>";
+						echo "<div class='container_avatar rounded-circle' style=' width: 200px;height:200px;'>";
+						echo "<img class='img_avatar rounded-circle' style='width: 200px; height: 200px' src='/pag/vistas/foto_mascota/$fila[foto]'<br><br>";
 						echo "Nombre: $fila[nombre] <br>";
+						echo "<div class='middle_avatar' style='width: 90%; max-height: 90%;margin-top: -5px;'>";
+						echo "<div class='text_avatar' style='opacity: 0.75'>";
 						echo "Tipo:";
 						if ($fila[tipo]==1) {
 							echo "Perro<br>";
@@ -580,15 +583,15 @@ if (!$_SESSION){
 						<input class='btn btn-xl' name='Submit' type='submit' value='Adoptar'>
 						</form>";
 						$contador++;
-
-						if ($contador>4) {
+						echo "</div></div></div>";
+						/*if ($contador>4) {
 							echo "</tr><tr>";
 							$contador = 0;
-						}
+						}*/
 					}
 				}
 			}
-			echo "</tr></table>";
+			//echo "</tr></table>";
 			?>
 		</div>	
 		<div class="row"><p>&nbsp;</p></div>			
