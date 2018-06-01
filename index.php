@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="pag/css/login.css">
     <script src="pag/js/jquery.js"></script>
     <script type="text/javascript" src="pag/popper-js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.js"></script>
+  	<script src="pag/js/bootstrap.js"></script>
     <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -53,7 +53,7 @@
   <a class="navbar-brand" href="">
     <img src="pag/img/petto.png" alt="logo" style="width: 40px">
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" >
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
@@ -69,7 +69,7 @@
  </nav>
 
     <!-- Header -->
-    <div class="container" style="background-image: url('pag/img/back.jpeg'); background-repeat: no-repeat; background-size: cover; max-width: 100%;max-height: 100%; overflow: auto;" id="main">
+    <div class="container" style="background-image: url('pag/img/back.jpeg'); background-repeat: no-repeat; background-size: cover; max-width: 100%;max-height: 100%; overflow: auto; " id="main">
   <div class="row" style="height: 100%;">
    <div class="col-sm-4"></div>
   <div class="jumbotron col-sm-4 text-center" style="margin-bottom: 10%; margin-top: 10%; opacity: 0.8;">
@@ -174,89 +174,20 @@
                     <h3 class="section-subheading text-muted">Esto es lo que tenemos para ti.</h3>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="timeline">
-                        <li>
-                            <div class="timeline-image">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <div class="timeline-image">
                                 <img class="img-circle img-responsive" src="img/about/1.jpg" alt=""> 
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>Estudiantes de Escom</h4>
-                                    <h4 class="subheading">Our Humble Beginnings</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Que desarrollan una plataforma para personas amantes de las mascotas</p>
+                                    <p class="text-muted">Que desarrollan una plataforma para personas amantes de las mascotas.</p>
+                                    <p>El objetivo de nuestro sistema, es apoyar a todos aquellos dueños de mascotas, con la finalidad de ahorrarles tiempo y esfuerzo en la busqueda y solicitud de servicios para sus mascotas.</p>
                                 </div>
                             </div>
-                        </li>
-                        <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Servicios</h2>
-                </div>
-            </div>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="subheading">Adopcion</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Porque nos preocupamos por todo sobre mascotas, implementamos el servicio de adopcion, para aquellas personas que desean tener su primer mascota, o agrandar su familia</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="subheading">Paseadores</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">¿Te preocupan tus compañeros, pero no puedes llevarlos a pasear?<br>
-                                    ¡No te preocupes!, existe un modulo donde puedes contratar a un paseador calificado para dejarlos a su cuidado</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="subheading">Tiendas</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">¿Buscas juguetes, alimentos o algo para tu mascota?<br>Encuentra tambie las tiendas mas cercanas y calificadas</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="subheading">Encuentra pareja para tu mascota</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">¿Buscas que no mascota no este sola?<br>Encuentrales pareja</p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image" style="width: 300px;height: 220px">
-                                <h4>¡no dejes pasar mas tiempo!
-                                    <br>Registrate y
-                                    <br>conciente a tu mascota</h4>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -264,11 +195,84 @@
 
     
 
+        <section id="servicio" style="z-index: 0;background-color: rgba(135,209,10,0.5);">
+        <div class="container-fluid text-center">
+            
+                <div class="col-md-12 text-center">
+                    <h2 class="section-heading">Servicios</h2>
+                </div>
+            </div>
+            <div class="col-md-6 text-center" style="display: inline-block;">
+              <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt=""> 
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Adopci&oacute;n</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Que desarrollan una plataforma para personas amantes de las mascotas</p>
+                                </div>
+                            </div>
+            </div>
+
+            <div class="col-md-5 text-center" style="display: inline-block;">
+              <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt=""> 
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Paseadores</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Que desarrollan una plataforma para personas amantes de las mascotas</p>
+                                </div>
+                            </div>
+            </div>
+
+            <div class="col-md-6 text-center" style="display: inline-block;">
+              <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt=""> 
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Tiendas</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Que desarrollan una plataforma para personas amantes de las mascotas</p>
+                                </div>
+                            </div>
+            </div>
+
+            <div class="col-md-5 text-center" style="display: inline-block;">
+              <div class="timeline-image">
+                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt=""> 
+                            </div>
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>Parejas</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p class="text-muted">Que desarrollan una plataforma para personas amantes de las mascotas</p>
+                                </div>
+                            </div>
+            </div>
+
+           
+        
+
+         <div class="timeline-image" style="width: 300px;height: 220px">
+                                <h4>¡no dejes pasar mas tiempo!
+                                    <br>Registrate y
+                                    <br>conciente a tu mascota</h4>
+                            </div>
+    </section>
+
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Petto 2017</span>
+                    <span class="copyright">Copyright &copy; Petto 2018</span>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
