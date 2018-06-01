@@ -22,6 +22,32 @@ if (!$_SESSION){
  <script type="text/javascript" src="../js/jquery.js"></script>
  <script type="text/javascript" src="../js/popper.min.js"></script>
  <script type="text/javascript" src="../js/bootstrap.js"></script>
+<?php include('../estructura/header.php'); ?>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(perro).css("display","none");
+	})
+</script>
+<script language="javascript" type="text/javascript">
+	function cambiotipo(selectTag){
+	 if(selectTag.value == '1'){
+	document.getElementById('perro').disabled = false;
+	document.getElementById('perro').style.display='block';
+	 }else{
+	 document.getElementById('perro').disabled = true;
+	document.getElementById('perro').style.display='none';
+	 }
+	 if(selectTag.value == '2'){
+	document.getElementById('gato').disabled = false;
+	document.getElementById('gato').style.display='block';
+	 }else{
+	 document.getElementById('gato').disabled = true;
+	 document.getElementById('gato').style.display='none';
+	 }
+	}
+</script> 
+
+
 
 <!--contenido-->
 	<div class="container-fluid">
@@ -115,7 +141,7 @@ if (!$_SESSION){
 				echo "<br><form action='borrarmascota.php' role='form' name='frm_ingreso' method='post'>
 				<input class='form-control' type='hidden' name='mascota' id='mascota' value='$fila[id_mascota]' />
 				<input class='btn btn-danger' name='Submit' type='submit' value='Borrar'>
-				</form></div></div><a class='btn btn-info'>$fila[nombre]</a></div>";
+				</form></div></div><a class='btn btn-info' style='margin-top: 200px'>$fila[nombre]</a></div>";
 
 				$contador++;
 
@@ -149,29 +175,14 @@ if (!$_SESSION){
 		        <div><p><h1>&nbsp;</h1></p></div>
 	
 
-<script language="javascript" type="text/javascript">
-	function cambiotipo(selectTag){
-	 if(selectTag.value == '1'){
-	document.getElementById('perro').disabled = false;
-	 }else{
-	 document.getElementById('perro').disabled = true;
-	 }
-	 if(selectTag.value == '2'){
-	document.getElementById('gato').disabled = false;
-	 }else{
-	 document.getElementById('gato').disabled = true;
-	 }
-	}
-</script> 
-
 
 	<div class="modal fade" id="registrar">
         	<div class="modal-dialog">
         		<div class="modal-content">
         		<!-- Header ventana -->
         			<div class="modal-header">
-        				<button tyle="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         				<h2 class="modal-title">Registrar Mascota</h2>
+        				<button tyle="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
         			</div>
         		<!-- Header ventana -->
         			<div class="modal-body">
@@ -187,7 +198,7 @@ if (!$_SESSION){
 					    <div class="form-group"> <!-- State Button -->
 					        <label for="state_id" class="control-label">Tipo</label>
 					        <select class="form-control" id="tipo" name="tipo" onchange="cambiotipo(this)" placeholder="tipo">
-					            <option name="" value=""></option> 
+					            <option name="" value="">Seleccion tipo de mascota</option> 
 					            <option value="1">Perro</option>
 					            <option value="2">Gato</option>
 					        </select>                    
@@ -196,9 +207,9 @@ if (!$_SESSION){
 
 					    <div class="form-group"> <!-- Street 1 -->
 					        <label for="street1_id" class="control-label">Raza</label>
-					        <select class="form-control" id="perro" name="raza" disabled="true">
-					        	<option value="Ninguna(Cruza)">Ninguna(Cruza)</option>
-					            <option value="Affenpinscher">Affenpinscher</option>
+					  <select class="form-control" id="perro" name="raza" disabled="true">
+					  	<option value="Ninguna(Cruza)">Ninguna(Cruza)</option>
+					   <option value="Affenpinscher">Affenpinscher</option>
 								<option value="Afgano">Afgano</option>
 								<option value="Akita">AkitAmerican Bullya</option>
 								<option value="Akita Americano">Akita Americano</option>
@@ -507,11 +518,11 @@ if (!$_SESSION){
 								<option value="Whippet">Whippet</option>
 								<option value="Wolfhound Irlandés">Wolfhound Irlandés</option>
 								<option value="Yorkshire Terrier">Yorkshire Terrier</option>									
-					        </select>
+					  </select>
 
-					        <select class="form-control" id="gato" name="raza" disabled="true" >
-					        	<option value="Ninguna(Cruza)">Ninguna(Cruza)</option>
-					            <option value="Abisinio">Abisinio</option>
+					  <select class="form-control" id="gato" name="raza" disabled="true" >
+					  	<option value="Ninguna(Cruza)">Ninguna(Cruza)</option>
+					   <option value="Abisinio">Abisinio</option>
 								<option value="Amercian Curl">Amercian Curl</option>
 								<option value="Angora Turco">Angora Turco</option>
 								<option value="Azul Ruso">Azul Ruso</option>
@@ -553,7 +564,7 @@ if (!$_SESSION){
 								<option value="Sphynx">Sphynx</option>
 								<option value="Toyger">Toyger</option>
 								<option value="Van Turco">Van Turco</option>
-					        </select>
+				   </select>
 					    </div>
 
 					    <div class="form-group"> <!-- Street 1 -->
@@ -576,13 +587,13 @@ if (!$_SESSION){
                             <input type="file" name="imagen" size="100"></td>
                         </td>
 					    </div>   
-		                    <input class="btn btn-xl" name="Submit" type="submit" value="Registro">                   				    
+		                    <input class="btn btn-success" name="Submit" type="submit" value="Registro">                   				    
 					</form>
 
         			</div>
         		<!-- Footer ventana -->
         			<div class="modal-footer">
-        				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        				<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
         			</div>
 
         		</div>

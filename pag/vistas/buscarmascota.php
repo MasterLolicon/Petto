@@ -17,6 +17,7 @@ if (!$_SESSION){
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="../css/bootstrap.css"/>
+ <link rel="stylesheet" type="text/css" href="../css/paseador.css">
  <script type="text/javascript" src="../js/jquery.js"></script>
  <script type="text/javascript" src="../js/popper.min.js"></script>
  <script type="text/javascript" src="../js/bootstrap.js"></script>
@@ -25,47 +26,51 @@ if (!$_SESSION){
 <?php include('../estructura/header.php'); ?>
 
 <!--contenido-->
-
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(perro).css("display","none");
+	})
+</script>
 <script language="javascript" type="text/javascript">
 	function cambiotipo(selectTag){
 	 if(selectTag.value == '1'){
 	document.getElementById('perro').disabled = false;
+	document.getElementById('perro').style.display='block';
 	 }else{
 	 document.getElementById('perro').disabled = true;
+	document.getElementById('perro').style.display='none';
 	 }
 	 if(selectTag.value == '2'){
 	document.getElementById('gato').disabled = false;
+	document.getElementById('gato').style.display='block';
 	 }else{
 	 document.getElementById('gato').disabled = true;
+	 document.getElementById('gato').style.display='none';
 	 }
 	}
 </script> 
 
 
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-3">
-				<h1>Adopción</h1>
-
-			</div>
-						<div class="row">
-			
+	<div class="container-fluid" style="margin-top: 60px">
+			<div class="jumbotron text-center" style="margin-bottom: 5px">
+				<h1 class="display-3">Adopción</h1>
 			</div>
 			<h3>Busqueda personalizada</h3>
-				<div class="col-md-3">
+				<div class="col-md-3" style="display: inline-block;">
 					
 					<form role="form" id="registro_servicio" name="registro_servicio" method="post"  enctype="multipart/form-data" action="buscarmascotape.php">
 
 					    <div class="form-group"> <!-- State Button -->
 					        <label for="state_id" class="control-label">Tipo</label>
 					        <select class="form-control" id="tipo" name="tipo" onchange="cambiotipo(this)" placeholder="tipo">
-					            <option name="" value=""></option> 
+					            <option name="" value="">Seleccione mascota</option> 
 					            <option value="1">Perro</option>
 					            <option value="2">Gato</option>
 					        </select>                    
 					    </div>    
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3" style="display: inline-block;">
+
 					<div class="form-group"> <!-- Street 1 -->
 					        <label for="street1_id" class="control-label">Raza</label>
 					        <select class="form-control" id="perro" name="raza" disabled="true">
@@ -431,7 +436,7 @@ if (!$_SESSION){
 					    </div>
 	
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-3" style="display: inline-block;">
 					
 	
 					    <div class="form-group"> <!-- State Button -->
@@ -456,7 +461,7 @@ if (!$_SESSION){
 
 		</div>
 
-		<div class="row">
+		<div class="container-fluid">
 			<?php 
 			include($_SERVER['DOCUMENT_ROOT']."/conexionbd/abrir_conexion.php"); 
 
@@ -467,13 +472,15 @@ if (!$_SESSION){
 			$resultado=mysqli_query($conexion,$query) or die(mysqli_error($conexion));
 			$contador=0; //cuenta el numero de mascotas
 
-			echo "<table><tr>";
+			//echo "<table><tr>";
 			while ($fila = mysqli_fetch_array($resultado)) {
 
 				if ($fila[id]!=$id_usuario) {
-					echo "<td>";
-						
-						echo "<img class='img-circle' style='width: 200px; height: 200px' src='foto_mascota/$fila[foto]'<br><br>";
+					//echo "<td>";
+						echo "<div class='container_avatar img-thumbnail text-center' style=' width: 200px;height:200px'>";
+						echo "<img class='img_avatar img-thumbnail' style='width: 200px; height: 200px' src='foto_mascota/$fila[foto]'<br><br>";
+						echo "<div class='middle_avatar' style='width: 90%; max-height: 90%;margin-top: -5px;'>";
+						echo "<div class='text_avatar' style='opacity: 0.75'>";
 						echo "Nombre: $fila[nombre] <br>";
 						echo "Tipo:";
 						if ($fila[tipo]==1) {
@@ -495,18 +502,19 @@ if (!$_SESSION){
 						<input class='form-control' type='hidden' name='mascota' id='mascota' value='$fila[id_mascota]' />
 						<input class='form-control' type='hidden' name='tipo' id='tipo' value='$fila[tipo]' />
 						<input class='form-control' type='hidden' name='emisor' id='emisor' value='$fila[id]' />
-						<input class='btn btn-xl' name='Submit' type='submit' value='Adoptar'>
+						<input class='btn btn-success' name='Submit' type='submit' value='Adoptar'>
 						</form>";
 						$contador++;
+						echo "</div></div></div>";
 
-						if ($contador>4) {
+						/*if ($contador>4) {
 							echo "</tr><tr>";
 							$contador = 0;
-						}
+						}*/
 					
 				}
 			}
-			echo "</tr></table>";
+			//echo "</tr></table>";
 			?>
 		</div>	
 		<div class="row"><p>&nbsp;</p></div>			

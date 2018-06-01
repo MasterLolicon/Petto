@@ -72,10 +72,10 @@ $avatar= $resultado8_obtenido['avatar'];
 
 <!--contenido-->
 
-	<div class="container-fluid">
+	<div class="container-fluid" style="padding-top: 60px">
 		<div class="row">
             <div class="col-md-6">
-									<h2>Datos personales</h2>
+									<h2>Datos personales</h2><br>
 									<div class="well">
 		                <ul>
 		                	<li><h4><?php echo "Nombre: ", $_SESSION['nombre']," " ,$apepat, " " ,$apemat ?></h4></li>
@@ -93,19 +93,21 @@ $avatar= $resultado8_obtenido['avatar'];
                   <label for="imagen">Cargar imagen:</label>
                   <input class="btn btn-default" type="file" name="imagen" size="100">
 								</br>
-                  <input class="btn btn-success" type="submit" value="Enviar imgaen">
+                  <input class="btn btn-success" type="submit" value="Enviar imagen">
                 </form></div>
 							</div>
             </div>
         </div>
-				<div class="row">
+				<div class="jumbotron text-center" style="padding-top: 15px; padding-bottom: 15px; margin-top: 30px">
 					<h2>Mi ubicación</h2>
-       <div class="col-md-5">
+    </div>
+    <div class="row">
+       <div class="col-md-5" style="padding-top: 10px">
             <?php
             if ($ubicacion=='1') {
                 echo "Aun no has registrado tu ubicacion";
             }
-
+            
             ?>
             <div id="map">
                 <h1>Mapa</h1>
@@ -117,8 +119,9 @@ $avatar= $resultado8_obtenido['avatar'];
 
                 </script>
             </div>
+
 					</div>
-						<div class="col-md-3">
+						<div class="col-md-6" style="margin-left: 80px">
 							<div class="well">
 								<p>Para actualizar la ubicación da clic en el boton y ubica en el mapa el lugar deseado, luego da clic en Registrar.</p>
 								<!-- <button class="btn btn-primary" type="button" onclick="location.href = 'ubicacion.php'" >Registrar/Actualizar ubicación</button> -->
