@@ -29,10 +29,10 @@ if (!$_SESSION){
 <!--contenido-->
 
 	<div class="container-fluid" style="margin-top: 55px">
-			<div class="jumbotron text-center" style="justify-content: center; padding-bottom: 5px;padding-top: 5px">
-					<h1 class="display-3">Servicios</h1>
+			<div class="jumbotron text-center" style="justify-content: center; padding-bottom: 5px;padding-top: 5px; background-color: #00ff7f">
+					<h1 class="display-3" style="font-family: Gadget">Servicios</h1>
 					</div>
-			<div class="row text-center" style="justify-content: center;">
+			<div class="row text-center" style="justify-content: center;font-family: Verdana">
 			<h3 class="display-4">Busqueda personalizada</h3>
 			</div>
 			<form role="form" id="registro_servicio" name="registro_servicio" method="post"  enctype="multipart/form-data" action="buscarservicio.php" style="margin-top: 30px">
@@ -107,7 +107,7 @@ if (!$_SESSION){
 			$contador = 0; //cuenta el numero de mascotas
 			$tar = 0;
 			//echo "<div class='container'>";
-			echo "<h2 class='display-4'>";
+			echo "<h2 class='display-4' style=' font-family: Impact'>";
 			if ($tipocam==1) {
 					echo "Veterinario</h2>";
 				}

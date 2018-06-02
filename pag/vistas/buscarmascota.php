@@ -49,11 +49,11 @@ if (!$_SESSION){
 	 }
 	}
 </script> 
-
+<body style="background-color: #00ff37">
 
 	<div class="container-fluid" style="margin-top: 60px">
-			<div class="jumbotron text-center" style="margin-bottom: 5px">
-				<h1 class="display-3">Adopción</h1>
+			<div class="jumbotron text-center" style="background-image: url(../../img/adop.jpeg); background-size: 100% 175%;background-position: 0px 220px">
+				<h1 class="display-3" style="color: #ffffff">Adopción</h1>
 			</div>
 			<h3>Busqueda personalizada</h3>
 				<div class="col-md-3" style="display: inline-block;">
@@ -453,15 +453,15 @@ if (!$_SESSION){
 				</div>
 
 				<div class="col-md-3">
-	     				<input class="btn btn-xl" name="Submit" type="submit" value="Busqueda">     
+	     				<input class="btn btn-success" name="Submit" type="submit" value="Busqueda">     
 				</div>  
-                   				    
+                   				    <br>
 				</form>
 				</div>
 
 		</div>
 
-		<div class="container-fluid">
+		<div class="container-fluid" style="background-image: url(../../img/green2.jpg); ">
 			<?php 
 			include($_SERVER['DOCUMENT_ROOT']."/conexionbd/abrir_conexion.php"); 
 
@@ -477,11 +477,11 @@ if (!$_SESSION){
 
 				if ($fila[id]!=$id_usuario) {
 					//echo "<td>";
-						echo "<div class='container_avatar rounded-circle' style=' width: 250px;height:250px'>";
-						echo "<img class='img_avatar rounded-circle' style='width: 250px; height: 250px' src='foto_mascota/$fila[foto]'>";
+						echo "<div class='container_avatar rounded-circle text-center' style=' width: 300px;height:300px;'>";
+						echo "<img class='img_avatar rounded-circle' style='width: 300px; height: 300px' src='foto_mascota/$fila[foto]'>";
 						echo "<div class='middle_avatar' style='width: 80%; max-height: 80%;margin-top: -5px;'>";
-						echo "<div class='text_avatar' style='opacity: 0.75'>";
-						echo "Nombre: $fila[nombre] <br>";
+						echo "<div class='text_avatar' style='background-color:rgba(66, 204, 255,0.7); color: #000000'><b>";
+
 						echo "Tipo:";
 						if ($fila[tipo]==1) {
 							echo "Perro<br>";
@@ -498,14 +498,14 @@ if (!$_SESSION){
 						elseif($fila[sexo]==2) {
 							echo "Hembra<br>";
 						}
-						echo "<form action='adoptar.php' role='form' name='frm_ingreso' method='post'>
+						echo "</b><form action='adoptar.php' role='form' name='frm_ingreso' method='post'>
 						<input class='form-control' type='hidden' name='mascota' id='mascota' value='$fila[id_mascota]' />
 						<input class='form-control' type='hidden' name='tipo' id='tipo' value='$fila[tipo]' />
 						<input class='form-control' type='hidden' name='emisor' id='emisor' value='$fila[id]' />
 						<input class='btn btn-success' name='Submit' type='submit' value='Adoptar'>
 						</form>";
 						$contador++;
-						echo "</div></div></div>";
+						echo "</div></div><a class='btn btn-info' style='margin-top:5px'>$fila[nombre]</a></div>";
 
 						/*if ($contador>4) {
 							echo "</tr><tr>";
