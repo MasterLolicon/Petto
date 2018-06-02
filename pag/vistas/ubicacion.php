@@ -9,7 +9,8 @@ if (!$_SESSION){
 ?>
 <html>
   <head>
-
+ <link rel="stylesheet" href="../css/bootstrap.css"/>
+ <link rel="stylesheet" type="text/css" href="../css/paseador.css">
     <meta charset="utf-8">
     <title>Obtener coordenadas de un marcador </title>
     <style>
@@ -24,7 +25,7 @@ if (!$_SESSION){
       }
       #lati{width: 500px;}
       #longi{width: 500px;}
-      #prueba{width: 500px; height: 200px;}
+      /*#prueba{width: 500px; height: 200px;*/}
     </style>
 
     <!--Claves Google API: AIzaSyCbL8ZIBRPVzXFIzjBhyfep9ms49HNe53c ,  AIzaSyCWQA-N9UZk6E9rc_q1bUjMEGz9KXQwi3w-->
@@ -39,7 +40,7 @@ if (!$_SESSION){
                 <div class="col-lg-6 col-lg-offset-3 text-center">
                   <p>Acerca el puntero lo más cercano a tu ubicación</p>
                   <p>
-                    <input class="btn btn-xl" name="Submit" type="submit" value="Registrar">
+                    <input class="btn btn-success" name="Submit" type="submit" value="Registrar">
                   </p>
                   <p>
                     <label class="sr-only" for="latitud"></label>
@@ -129,6 +130,8 @@ function toggleBounce() {
   } else {
     marker.setAnimation(google.maps.Animation.BOUNCE);
   }
+
+  window.close();
 }
 
 
@@ -137,6 +140,6 @@ function toggleBounce() {
 
     </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-DIy0Z7d49G6VSXnR1WgQYY5y_EqJSKI&callback=initMap"></script>
- 	<div id="prueba"></div>
+ 	<!--<div id="prueba"></div>-->
   </body>
 </html>

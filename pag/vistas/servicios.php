@@ -74,13 +74,16 @@ if (!$_SESSION){
 					            <option value="1 500 000">Todos los registros</option>
 					        </select>            
 					    </div> 
+
+
 				</div>
-<br>
-				<div class="col-md-3" style="margin-top: 30px; display:inline-block;" >
+				<div class="col-md-1" style="margin-left: 20px ;display:inline-block;" >
 	     				<input class="btn btn-success" name="Submit" type="submit" value="Busqueda">     
 				</div> 
+<br>
+				
 
-				<div class="col-md-2 float-right" >
+				<div class="col-md-2" >
 	     				<a href="#registrar" class="btn btn-primary btn-lg" data-toggle="modal">Registrar Servicio</a>     
 				</div> 	                     				    
 				</form>

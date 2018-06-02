@@ -12,7 +12,7 @@
 			<body>
 		<header>
 
-<nav class="navbar navbar-expand-sm navbar-light fixed-top" style="background-color: orange">
+<nav class="navbar navbar-expand-sm navbar-light fixed-top" style="background-color: #FFEE00;">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -23,22 +23,22 @@
     <img src="http://localhost/Petto/pag/img/petto.png" alt="logo" style="width: 40px">
   </a>
   <li>
-   <a class="nav-link" href="http://localhost/Petto/pag/vistas/mismascotas.php">Mis Mascotas</a>
+   <a class="nav-link" href="http://localhost/Petto/pag/vistas/mismascotas.php" style="color: #000000">Mis Mascotas</a>
    </li>
    
    <li class="nav-item">
-    <a class="nav-link" href="http://localhost/Petto/pag/vistas/servicios.php">Servicios</a>
+    <a class="nav-link" href="http://localhost/Petto/pag/vistas/servicios.php" style="color: #000000">Servicios</a>
    </li>
    <li class="nav-item">
-    <a class="nav-link" href="http://localhost/Petto/pag/vistas/buscarmascota.php">Centro de Adopción</a>
+    <a class="nav-link" href="http://localhost/Petto/pag/vistas/buscarmascota.php" style="color: #000000">Centro de Adopción</a>
    </li>
    <li class="n
    <li class="nav-item">
-    <a class="nav-link" href="http://localhost/Petto/pag/vistas/emparejarmascota.php">Emparejar Mascotas</a>
+    <a class="nav-link" href="http://localhost/Petto/pag/vistas/emparejarmascota.php" style="color: #000000">Emparejar Mascotas</a>
    </li>
     
     <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="" id="mascotas" data-toggle="dropdown">Perfil</a>
+    <a class="nav-link dropdown-toggle" href="" id="mascotas" data-toggle="dropdown" style="color: #000000">Perfil</a>
      <div class="dropdown-menu ">
       <a class="dropdown-item" href="http://localhost/Petto/pag/vistas/notificaciones.php">Notificaciones</a>
       <a class="dropdown-item" href="http://localhost/Petto/pag/vistas/perfil.php">Configuraci&oacute;n</a>

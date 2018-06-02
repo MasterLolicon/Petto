@@ -91,7 +91,7 @@ $avatar= $resultado8_obtenido['avatar'];
 								<div class="well">
 									<form action="subiravatar.php" method="post" enctype="multipart/form-data">
                   <label for="imagen">Cargar imagen:</label>
-                  <input class="btn btn-default" type="file" name="imagen" size="100">
+                  <input class="btn btn-info" type="file" name="imagen" size="100">
 								</br>
                   <input class="btn btn-success" type="submit" value="Enviar imagen">
                 </form></div>

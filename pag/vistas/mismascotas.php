@@ -50,10 +50,11 @@ if (!$_SESSION){
 
 
 <!--contenido-->
+<body style="background-color: #9aff56">
 	<div class="container-fluid">
 		<div class="row" style="margin-top: 80px">
-			<div class="col-md-3" >
-				<h1>Mis Mascotas</h1>
+			<div class="col-md-5">
+				<h1 class="display-4" style="font-family:Courier">Mis Mascotas</h1>
 			</div>
 			<!--<div class="col-md-3">
 				<h1></h1>
@@ -63,8 +64,8 @@ if (!$_SESSION){
 	            <a href="#registrar" class="btn btn-primary btn-lg" data-toggle="modal">Registrar Mascota</a>
 	        </div>
 		</div>
-
-		<div class="container-fluid" style="margin-top: 30px;margin-left: ">
+  </div>
+		<div class="container-fluid" style="margin-top: 30px;background-image: url(../../img/mismascotas.jpg); background-repeat: no-repeat; background-size: 100% 100%">
 			<?php 
 			include($_SERVER['DOCUMENT_ROOT']."/conexionbd/abrir_conexion.php"); 
 
@@ -86,10 +87,10 @@ if (!$_SESSION){
 				echo "<div class='text_avatar' style='font-size: 150%'>";
 				echo "<a class='btn btn-info'  href='#datos$contador' data-toggle='modal'>$fila[nombre]</a></div></div></div>";
 */
-				echo "<div class='container_avatar rounded-circle' style='width: 200px;height:200px'>";
+				echo "<div class='container_avatar rounded-circle' style='width: 200px;height:200px; border:2px solid black'>";
      echo "<img src='foto_mascota/$fila[foto]' alt='Avatar' class='image_avatar rounded-circle' style='width:100%;height:100%; background-size: cover'>";
      echo "<div class='middle_avatar' style='max-width: 50%; max-height: 50%;'>";
-     echo "<div class='text_avatar' style='font-size: 150%'><a class='btn btn-info' href='#datos$contador' data-toggle='modal'>$fila[nombre] </a>";
+     echo "<div class='text_avatar' style='font-size: 150%'><a style='font-family: cursive' class='btn btn-info' href='#datos$contador' data-toggle='modal'>$fila[nombre] </a>";
      echo "</div>";
      echo "</div>";
      echo "</div>";
@@ -109,7 +110,7 @@ if (!$_SESSION){
 				elseif($fila[tipo]==2) {
 					echo "Gato<br>";
 				}*/
-				echo "<div style='display: inline-block'>";
+				echo "<div style='display: inline-block;  padding: 10px; background-color:rgba(169, 211, 209,0.5)'>";
 				echo "Raza: $fila[raza] <br>";
 				echo "Edad: $fila[edad] años <br>";
 				echo "Genero: ";
@@ -191,7 +192,6 @@ if (!$_SESSION){
 		-->
 			<br><br>
 
-		        <div><p><h1>&nbsp;</h1></p></div>
 	
 
 
