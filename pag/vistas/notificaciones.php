@@ -112,7 +112,7 @@ if (!$_SESSION){
 								<input class='form-control' type='hidden' name='mascota' id='mascota' value='$fila[mascota]' />
 								<input class='form-control' type='hidden' name='receptor' id='receptor' value='$fila[emisor]' />
 								<input class='form-control' type='hidden' name='tipotra' id='tipotra' value='2' />
-								<input class='btn btn-xl' name='Submit' type='submit' value='Aceptar'>
+								<input class='btn btn-success' name='Submit' type='submit' value='Aceptar'>
 								</form>";
 							//echo "</td>";
 							}
@@ -120,17 +120,18 @@ if (!$_SESSION){
 							echo "<br><span class='label label-danger'>Mascota ya no disponible para reproduccion</span>";
 						}
 					}
-	
+					echo "</div>";
 
 					$contador++;
 			}//echo "</tr></table>";
+			echo "<div class='jumbotron' style='padding-top:2px; padding-bottom: 15px;'>";
 			if ($contador==1) {
 				echo "<br><span class='label label-info'>1 Notificación</span>";
 			}
 			elseif ($contador>1) {
 				echo "<br>$contador Notificaciones";
 			}
-			
+			echo "</div>";
 			?>
 
 		
@@ -171,14 +172,14 @@ if (!$_SESSION){
 
 					$contador++;
 			}//echo "</tr></table>";
-
+			echo "<div class='jumbotron'>";
 			if ($contador==1) {
 				echo "<br><span class='label label-info' >1 Notificación</span>";
 			}
 			elseif ($contador>1) {
 				echo "<br>$contador Notificaciones";
 			}
-			
+			echo "</div>";
 			
 			?>
 		</div>	

@@ -9,7 +9,7 @@
   session_start();
 
   if (!$_SESSION){
-  header("location:../../index.php"); 
+  header("location: ../../index.php"); 
 }
   $id_usuario= $_SESSION['id_usuario'];
 

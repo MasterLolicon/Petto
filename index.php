@@ -200,72 +200,81 @@
             
                 <div class="col-md-12 text-center">
                     <h2 class="section-heading">Servicios</h2>
+                    <h3 class="section-subheading text-muted">Los servicios que se ofrecen para ti y tus mascotas</h3>
                 </div>
             </div>
             <div class="col-md-6 text-center" style="display: inline-block;">
               <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt=""> 
+                                <img class="img-circle img-responsive" src="pag/img/adopcion.jpg" alt="" style="width: 200px;height: 200px"> 
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>Adopci&oacute;n</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Que desarrollan una plataforma para personas amantes de las mascotas</p>
+                                    <p class="text-muted">Porque nos preocupamos por todo sobre mascotas, implementamos el servicio de adopcion, para aquellas personas que desean tener su primer mascota, o agrandar su familia</p>
                                 </div>
                             </div>
             </div>
 
             <div class="col-md-5 text-center" style="display: inline-block;">
               <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt=""> 
+                                <img class="img-circle img-responsive" src="pag/img/paseador.png" alt="" style="width: 400px;height: 200px"> 
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>Paseadores</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Que desarrollan una plataforma para personas amantes de las mascotas</p>
+                                    <p class="text-muted">¿Te preocupan tus compañeros, pero no puedes llevarlos a pasear?<br>
+                                    ¡No te preocupes!, existe un modulo donde puedes contratar a un paseador calificado para dejarlos a su cuidado</p>
                                 </div>
                             </div>
             </div>
 
             <div class="col-md-6 text-center" style="display: inline-block;">
               <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt=""> 
+                                <img class="img-circle img-responsive" src="pag/img/tienda.jpg" alt="" style="width: 200px;height: 200px"> 
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>Tiendas</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Que desarrollan una plataforma para personas amantes de las mascotas</p>
+                                    <p class="text-muted">¿Buscas juguetes, alimentos o algo para tu mascota?<br>Encuentra tambie las tiendas mas cercanas y calificadas</p>
                                 </div>
                             </div>
             </div>
 
             <div class="col-md-5 text-center" style="display: inline-block;">
               <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt=""> 
+                                <img class="img-circle img-responsive" src="pag/img/pareja.jpg" alt="" style="width: 200px;height: 200px"> 
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>Parejas</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Que desarrollan una plataforma para personas amantes de las mascotas</p>
+                                    <p class="text-muted">¿Buscas que no mascota no este sola?<br>Encuentrales pareja</p></p>
                                 </div>
                             </div>
             </div>
 
            
         
+<div class="col-md-4" style="display: inline-block;">&nbsp;</div>
 
-         <div class="timeline-image" style="width: 300px;height: 220px">
-                                <h4>¡no dejes pasar mas tiempo!
+         <div class="col-md-4 text-center" style="display: inline-block;">
+              
+                            <div class="timeline-panel">
+                                <div class="timeline-heading">
+                                    <h4>¡no dejes pasar mas tiempo!
                                     <br>Registrate y
                                     <br>conciente a tu mascota</h4>
+                                </div>
+                                
                             </div>
+            </div>
     </section>
 
     <footer>
@@ -274,24 +283,7 @@
                 <div class="col-md-4">
                     <span class="copyright">Copyright &copy; Petto 2018</span>
                 </div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="#">Politicas de Privacidad</a>
-                        </li>
-                        <li><a href="#">Terminos de Uso</a>
-                        </li>
-                    </ul>
-                </div>
+                
             </div>
         </div>
     </footer>
