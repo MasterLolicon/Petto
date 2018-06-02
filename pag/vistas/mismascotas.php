@@ -80,20 +80,28 @@ if (!$_SESSION){
 			while ($fila = mysqli_fetch_array($resultado)) {
 
 				//echo "<td>";
-				echo "<div class='container_avatar rounded-circle ' style='background-image: url(foto_mascota/$fila[foto]);background-size: cover; width: 200px;height:200px'>";
-				//echo "<img class='img_avatar img-thumbnail' style='width: 400px; height: 400px' src='foto_mascota/$fila[foto]'>";
-				echo "<div class='middle_avatar' style='width: 90%; max-height: 90%;margin-top: -5px;'>	";
-				echo "<a class='btn btn-info' style='margin-top: 200px'  href='#datos$contador' data-toggle='modal'>$fila[nombre]</a></div></div>";
-
+				/*echo "<div class='container_avatar rounded-circle ' style='background-image: url(foto_mascota/$fila[foto]);background-size: cover; width: 200px;height:200px'>";
+				echo "<img class='img_avatar rounded-circle' style='width: 200px; height: 200px' src='foto_mascota/$fila[foto]'>";
+				echo "<div class='middle_avatar' style='width: 50%; height: 10%; margin-top: -5px;'>	";
+				echo "<div class='text_avatar' style='font-size: 150%'>";
+				echo "<a class='btn btn-info'  href='#datos$contador' data-toggle='modal'>$fila[nombre]</a></div></div></div>";
+*/
+				echo "<div class='container_avatar rounded-circle' style='width: 200px;height:200px'>";
+     echo "<img src='foto_mascota/$fila[foto]' alt='Avatar' class='image_avatar rounded-circle' style='width:100%;height:100%; background-size: cover'>";
+     echo "<div class='middle_avatar' style='max-width: 50%; max-height: 50%;'>";
+     echo "<div class='text_avatar' style='font-size: 150%'><a class='btn btn-info' href='#datos$contador' data-toggle='modal'>$fila[nombre] </a>";
+     echo "</div>";
+     echo "</div>";
+     echo "</div>";
 
 				echo "<div class='modal fade text-center' id='datos$contador'>";
-				echo "<div class='modal-dialog'>";
+				echo "<div class='modal-dialog modal-lg'>";
 				echo "<div class='modal-content'>";
 				echo "<div class='modal-header'>";
 				echo "<h2 class='modal-title'>$fila[nombre]</h2>";
 				echo "<button tyle='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button></div>";
 				echo "<div class='modal-body'>";
-				echo "<div class='container_avatar rounded-circle ' style='background-image: url(foto_mascota/$fila[foto]);background-size: cover; width: 200px;height:200px'></div><br>";
+				echo "<div class='container_avatar img-thumbnail float-left ' style='background-image: url(foto_mascota/$fila[foto]);background-size: cover; width: 300px;height:300px;'></div><br>";
 				/*echo "Especie:";
 				if ($fila[tipo]==1) {
 					echo "Perro<br>";
@@ -101,6 +109,7 @@ if (!$_SESSION){
 				elseif($fila[tipo]==2) {
 					echo "Gato<br>";
 				}*/
+				echo "<div style='display: inline-block'>";
 				echo "Raza: $fila[raza] <br>";
 				echo "Edad: $fila[edad] años <br>";
 				echo "Genero: ";
@@ -151,7 +160,7 @@ if (!$_SESSION){
 				echo "<br><form action='borrarmascota.php' role='form' name='frm_ingreso' method='post'>
 				<input class='form-control' type='hidden' name='mascota' id='mascota' value='$fila[id_mascota]' />
 				<input class='btn btn-danger' name='Submit' type='submit' value='Borrar'>
-				</form></div></div></div></div>";
+				</form></div></div></div></div></div>";
 
 				$contador++;
 
