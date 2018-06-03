@@ -57,11 +57,6 @@ if (!$_SESSION){
                     <input type="hidden" name="lilo" id="lilo" value="1" />
                   </p>
                 </div>
-                <div class="col-lg-4 col-lg-offset-4 text-center">
-                  </br>
-                  </br>
-
-                </div>
                 </form>
 
 <script>
@@ -132,13 +127,12 @@ function toggleBounce() {
   }
 
   window.close();
+  
 }
 
 
 </script>
 
-
-    </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-DIy0Z7d49G6VSXnR1WgQYY5y_EqJSKI&callback=initMap"></script>
  	<!--<div id="prueba"></div>-->
   </body>
