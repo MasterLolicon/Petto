@@ -33,7 +33,7 @@ if (!$_SESSION){
 				<!--CAMBIAR POR BOTON-->
 			</div>
 			<div class="col-md-4" >
-				<p>Para buscar pareja a otras masctoas, cambia su estado en <a href="mismascotas.php" style="color: #e5ff00">Mis Mascotas</a></p>
+				<p>Para buscar pareja a otras mascotas, cambia su estado en <a href="mismascotas.php" style="color: #e5ff00">Mis Mascotas</a></p>
 			</div>
 		</div>
 

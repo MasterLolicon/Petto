@@ -53,7 +53,7 @@ if (!$_SESSION){
 
 	<div class="container-fluid" style="margin-top: 60px">
 			<div class="jumbotron text-center" style="background-image: url(../../img/adop.jpeg); background-size: 100% 175%;background-position: 0px 220px">
-				<h1 class="display-3" style="color: #ffffff">Adopción</h1>
+				<h1 class="display-3" style="color: #ffffff">Adopci&oacute;n</h1>
 			</div>
 			<h3>Busqueda personalizada</h3>
 				<div class="col-md-3" style="display: inline-block;">
@@ -515,7 +515,7 @@ if (!$_SESSION){
 				}
 			}
 			//echo "</tr></table>";
-			?>
+			?><br><br>
 		</div>	
 		<div class="row"><p>&nbsp;</p></div>			
 		<div class="row"><p>&nbsp;</p></div>
