@@ -24,15 +24,16 @@ if (!$_SESSION){
  <script type="text/javascript" src="../js/bootstrap.js"></script>
 
 <!--contenido-->
+<body style="background-image: url(../img/heart.jpg">
 	<div class="container-fluid">
-		<div class="row" style="margin-top: 80px">
+		<div class="row" style="margin-top: 80px; background-color: rgba(255, 0, 225,0.7); color: #FFFFFF">
 			<div class="col-md-8" >
-				<h1>Mascotas disponibles para emparejar</h1>
-				<h4>Busca al compañero ideal para tu mascota</h4>
+				<h1 style="font-family: Impact">Mascotas disponibles para emparejar</h1>
+				<h4 style="font-family: Courier">Busca al compañero ideal para tu mascota</h4>
 				<!--CAMBIAR POR BOTON-->
 			</div>
 			<div class="col-md-4" >
-				<p>Para buscar pareja a otras masctoas, cambia su estado en <a href="mismascotas.php">Mis Mascotas</a></p>
+				<p>Para buscar pareja a otras masctoas, cambia su estado en <a href="mismascotas.php" style="color: #e5ff00">Mis Mascotas</a></p>
 			</div>
 		</div>
 

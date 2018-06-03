@@ -27,9 +27,11 @@ if (!$_SESSION){
 
 <!--contenido-->
 
+<body style="background-image: url(../img/heart.jpg">
+
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-12" style="margin-top: 60px;background-color: ">
+			<div class="col-md-12" style="margin-top: 60px; background-color: rgba(255, 0, 225,0.7); color: #FFFFFF">
 			<?php $mascota =$_POST['mascota'];  
 			echo "<h1>Buscar pareja para $mascota</h1>";
 			?>

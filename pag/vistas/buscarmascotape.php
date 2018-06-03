@@ -464,7 +464,7 @@ if (!$_SESSION){
 
 		</div>
 
-		<div class="container-fluid">
+		<div class="container-fluid"  style="background-image: url(../../img/green2.jpg);">
 			<?php 
 			include($_SERVER['DOCUMENT_ROOT']."/conexionbd/abrir_conexion.php"); 
 
