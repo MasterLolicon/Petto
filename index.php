@@ -48,7 +48,7 @@
 <body id="page-top" class="index">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #aaccff; z-index:1 ;">
+    <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #96d2bb; z-index:1 ;">
   <!--<a class="navbar-brand" href="#">Petto</a>-->
   <a class="navbar-brand" href="">
     <img src="pag/img/petto.png" alt="logo" style="width: 40px">
@@ -63,7 +63,7 @@
    </li>
    <li class="nav-item">
     <a class="nav-link" href="#servicio">Servicios</a>
-   </li>  
+   </li>
   </ul>
  </div>
  </nav>
@@ -88,7 +88,7 @@
 
 <!--registrar-->
 <div id="id02" class="modal" style="padding-top: 5px; overflow: auto;">
-  
+
   <form class="modal-content animate" id="registro" name="registro" method="post" action="script_guarda.php" style="width: 50%; margin-left: 28%;">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id02').style.display='none';document.getElementById('page-top').style.overflow='auto';"  class="close" title="Close Modal">&times;</span>
@@ -116,12 +116,12 @@
 
       <label for="ubicacion" style="display: none;"><b>Ubicacion</b></label>
       <input style="display: none;" type="text" class="form-control" placeholder="ubicacion" name="ubicacion" id="ubicacion" value="1" >
-        
+
       <button type="submit" name="enviar" onclick="validar();" class="btn btn-primary">Registrar</button>
       </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancelar</button>
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="btn btn-danger">Cancelar</button>
     </div>
   </form>
 </div>
@@ -129,7 +129,7 @@
 
 <!--login-->
  <div id="id01" class="modal" style="overflow: auto;">
-  
+
   <form class="modal-content animate" action="script_acceso_usuario.php" role="form" name="frm_ingreso" method="post" style="width: 50%; margin-left: 28%" >
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none';document.getElementById('page-top').style.overflow='hidden'" class="close" title="Close Modal">&times;</span>
@@ -141,13 +141,13 @@
 
       <label for="contrasenia" ><b>Contrase&ntilde;a</b></label>
       <input type="password" placeholder="Contrase&ntilde;a" name="contrasenia" id="contrasenia" required>
-        
+
       <button type="submit" class="btn btn-primary" name="Submit">Ingresar</button>
 
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger">Cancelar</button>
       <span class="psw">Forgot <a href="#">password?</a></span>
     </div>
   </form>
@@ -177,7 +177,7 @@
             <div class="row text-center">
                 <div class="col-md-12">
                     <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt=""> 
+                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -193,11 +193,11 @@
         </div>
     </section>
 
-    
 
-        <section id="servicio" style="z-index: 0;background-color: rgba(135,209,10,0.5);">
+
+        <section id="servicio" style="z-index: 0;background-color: rgba(94, 111, 226, 0.5);">
         <div class="container-fluid text-center">
-            
+
                 <div class="col-md-12 text-center">
                     <h2 class="section-heading">Servicios</h2>
                     <h3 class="section-subheading text-muted">Los servicios que se ofrecen para ti y tus mascotas</h3>
@@ -205,7 +205,7 @@
             </div>
             <div class="col-md-6 text-center" style="display: inline-block;">
               <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="pag/img/adopcion.jpg" alt="" style="width: 200px;height: 200px"> 
+                                <img class="img-circle img-responsive" src="pag/img/adopcion.jpg" alt="" style="width: 200px;height: 200px">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -219,7 +219,7 @@
 
             <div class="col-md-5 text-center" style="display: inline-block;">
               <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="pag/img/paseador.png" alt="" style="width: 400px;height: 200px"> 
+                                <img class="img-circle img-responsive" src="pag/img/paseador.png" alt="" style="width: 400px;height: 200px">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -234,7 +234,7 @@
 
             <div class="col-md-6 text-center" style="display: inline-block;">
               <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="pag/img/tienda.jpg" alt="" style="width: 200px;height: 200px"> 
+                                <img class="img-circle img-responsive" src="pag/img/tienda.jpg" alt="" style="width: 200px;height: 200px">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -248,7 +248,7 @@
 
             <div class="col-md-5 text-center" style="display: inline-block;">
               <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="pag/img/pareja.jpg" alt="" style="width: 200px;height: 200px"> 
+                                <img class="img-circle img-responsive" src="pag/img/pareja.jpg" alt="" style="width: 200px;height: 200px">
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
@@ -260,19 +260,19 @@
                             </div>
             </div>
 
-           
-        
+
+
 <div class="col-md-4" style="display: inline-block;">&nbsp;</div>
 
          <div class="col-md-4 text-center" style="display: inline-block;">
-              
+
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>¡no dejes pasar mas tiempo!
                                     <br>Registrate y
                                     <br>conciente a tu mascota</h4>
                                 </div>
-                                
+
                             </div>
             </div>
     </section>
@@ -283,7 +283,7 @@
                 <div class="col-md-4">
                     <span class="copyright">Copyright &copy; Petto 2018</span>
                 </div>
-                
+
             </div>
         </div>
     </footer>
