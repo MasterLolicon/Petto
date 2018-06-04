@@ -71,7 +71,7 @@ if (!$_SESSION){
 					            <option value="10">10Km</option>
 					            <option value="50">50Km</option>
 					            <option value="100">100Km</option>
-					            <option value="1 500 000">Todos los registros</option>
+					            <option value="1500000">Todos los registros</option>
 					        </select>            
 					    </div> 
 
@@ -141,28 +141,7 @@ if (!$_SESSION){
 				echo "<div class='text_avatar'>";
 						echo "<h4 class='card-title'>$fila[nombre]</h4>";
 						echo "<p class='card-text'>$fila[descripcion] </p>";
-			?><!--	echo "<p class='card-text'>Tipo:";
-				if ($fila[tipo]==1) {
-					echo "Veterinario</p>";
-				}
-				elseif($fila[tipo]==2) {
-					echo "Zona de paseo</p>";
-				}
-				elseif($fila[tipo]==3) {
-					echo "Tienda</p>";
-				}
-				elseif($fila[tipo]==4) {
-					echo "Estética</p>";
-				}
-				elseif($fila[tipo]==5) {
-					echo "Entrenador</p>";
-				}
-				elseif($fila[tipo]==5) {
-					echo "Entrenador</p>";
-				}
-				elseif($fila[tipo]==6) {
-					echo "Paseador</p>";
-				} --><?php
+			
 					echo "<p class='card-text'>Contacto: $fila[contacto]</p>";
 					echo "<p class='card-text'>Calificación:</p>" ;
 					echo "<h3 style='color: #e5ff00;'>";for($i=1;$i<$fila[promcal];$i++){
@@ -191,10 +170,10 @@ if (!$_SESSION){
 
 				/*if($contador == 5){
 					echo "</br></div>";
-				}
+				}*/
 
 				$contador++;
-				if($contador == 5){
+				/*if($contador == 5){
 					$contador = 0;
 				}*/
 			}

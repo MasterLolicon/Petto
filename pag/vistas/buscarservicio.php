@@ -18,6 +18,7 @@ if (!$_SESSION){
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
  <link rel="stylesheet" href="../css/bootstrap.css"/>
+ <link rel="stylesheet" type="text/css" href="../css/paseador.css">
  <script type="text/javascript" src="../js/jquery.js"></script>
  <script type="text/javascript" src="../js/popper.min.js"></script>
  <script type="text/javascript" src="../js/bootstrap.js"></script>
@@ -78,7 +79,7 @@ if (!$_SESSION){
 				</div>
 <br>
 				<div class="col-md-3" style="padding-top: 30px">
-	     				<input class="btn btn-xl" name="Submit" type="submit" value="Busqueda">     
+	     				<input class="btn btn-success" name="Submit" type="submit" value="Busqueda">     
 				</div>  
 				
 				<div class="col-md-2 float-right" >
@@ -87,7 +88,7 @@ if (!$_SESSION){
 				</form>
 				
 			<div class="container" style="padding-top: 50px">
-			<div class="col-md-111">
+			<!--<div class="col-md-11">-->
 			
 			<?php 
 			$id_usuario= $_SESSION['id_usuario'];
@@ -107,12 +108,12 @@ if (!$_SESSION){
 			$contador = 0; //cuenta el numero de mascotas
 			$contadorfinal = 0;
 
-			echo "<table><tr>";
+			//echo "<table><tr>";
 			while ($fila = mysqli_fetch_array($resultado)) {
 
 				
 				if ($opcion==$fila[tipo]) {
-				echo "<td>";
+				//echo "<td>";
 					$latitude2=$fila[latitud]; //Poner aqui la latitud del servicio/mascota
 				    $longitude2=$fila[longitud]; //Poner aqui la longitud del servicio/mascota
 
@@ -126,37 +127,29 @@ if (!$_SESSION){
 				    $d = $earth_radius * $c;
 				    if($d<=$ra){
 			
-				    	echo "<div class='well'>";
-				    	echo "<img class='img-rounded' style='width: 200px; height: 200px' src='foto_servicio/$fila[foto]'<br><br>";
-						echo "Nombre: $fila[nombre] <br>";
-						echo "Descripción: $fila[descripcion] <br>";
-						echo "Tipo:";
-						if ($fila[tipo]==1) {
-							echo "Veterinario<br>";
-						}
-						elseif($fila[tipo]==2) {
-							echo "Zona de paseo<br>";
-						}
-						elseif($fila[tipo]==3) {
-							echo "Tienda<br>";
-						}
-						elseif($fila[tipo]==4) {
-							echo "Estética<br>";
-						}
-						elseif($fila[tipo]==5) {
-							echo "Entrenador<br>";
-						}
-						elseif($fila[tipo]==5) {
-							echo "Entrenador<br>";
-						}
-						elseif($fila[tipo]==6) {
-						echo "Paseador<br>";
-						}
-						echo "Contacto: $fila[contacto] <br>";
-						echo "Calificación: $fila[promcal]<br>" ;
-						echo "Califica:<br><form action='calificar_servicio.php' role='form' name='frm_ingreso' method='post'>
+				    	//echo "<div class='well'>";
+				    	echo "<div class='container_avatar img-thumbnail text-center'>";
+				    	echo "<img class='img-avatar img-thumbnail' style='width: 310px; height: 310px' src='foto_servicio/$fila[foto]'>";
+				    	echo "<div class='middle_avatar' style='width: 90%; max-height: 90%;margin-top: -5px'>";
+				    	echo "<div class='text_avatar'>";
+						echo "<h4 class='card-title'>$fila[nombre]</h4>";
+						echo "<p class='card-text'>$fila[descripcion] </p>";
+						
+						echo "<p class='card-text'>Contacto: $fila[contacto] </p>";
+						echo "<p class='card-text'>Calificación</p>" ;
+						echo "<h3 style='color: #e5ff00;'>";for($i=1;$i<$fila[promcal];$i++){
+						echo "&#9733 ";
+					}
+					echo"</h3>";
+
+						echo "<a class='btn btn-primary' href='mostrarubicacionserv.php?latitud=$fila[latitud]&longitud=$fila[longitud]' target='_blank' onclick='window.open(this.href,this.target,'width=800,height=600,top=100,left=200,toolbar=no,location=no,status=no,menubar=no');return false;'>Mostrar ubicación</a>
+						<div class='card-block'>
+						<br>
+						<p class='card-text'>Califica:</p>
+						<form action='calificar_servicio.php' role='form' name='frm_ingreso' method='post'>
 						<input class='form-control' type='hidden' name='servicio' id='servicio' value='$fila[id_servicio]' />
 						<select class='form-control' id='calif' name='calif'>
+											<option selected>0</option>
 							    <option value='1'>1</option>
 							    <option value='2'>2</option>
 							    <option value='3'>3</option>
@@ -164,18 +157,16 @@ if (!$_SESSION){
 							    <option value='5'>5</option>
 						</select>
 						<br>
-						<div class='col-md-6'>
-						<input class='btn btn-xl' name='Submit' type='submit' value='Calificar'>
-						</div>
-						<div class='col-md-6'>
-						<a class='btn btn-primary' href='mostrarubicacionserv.php?latitud=$fila[latitud]&longitud=$fila[longitud]' target='_blank' onclick='window.open(this.href,this.target,'width=800,height=600,top=100,left=200,toolbar=no,location=no,status=no,menubar=no');return false;'>Mostrar ubicación</a>
-						</form>";
-						echo "</div><br><br>";
+						<button class='btn btn-info' name='Submit' type='submit' value='Calificar'>Calificar</button>
+					
+						
+						</form>";	
+						echo "</div></div></div></div>";
 						$contador++;
-						if ($contador>4) {
+						/*if ($contador>4) {
 							echo "</tr><tr>";
 							$contador = 0;
-						}
+						}*/
 
 						$contadorfinal++;
 				    }
@@ -184,11 +175,11 @@ if (!$_SESSION){
 				}
 			}
 			if($contadorfinal ==0){
-					echo "<h2>No hay resultados para la búsqueda :( </h2></tr></table>";
+					echo "<h2>No hay resultados para la búsqueda :( </h2>";
 				}
 
 			else{
-				echo "</tr></table>$contadorfinal Resultados";
+				echo "<br><br>$contadorfinal Resultados";
 			}
 
 			mysqli_free_result($res0);
@@ -261,7 +252,7 @@ if (!$_SESSION){
 
 	</div>
 
-
+<br><br>
 
 	</div>
 

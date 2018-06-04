@@ -54,7 +54,7 @@ $avatar= $resultado8_obtenido['avatar'];
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en ">
 <head>
  
 <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyAzAh8rjxQ-nuIprPl5SA2B3wex9YXKAEI " async="" defer="defer" type="text/javascript"></script>
