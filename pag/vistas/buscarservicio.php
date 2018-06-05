@@ -30,7 +30,7 @@ if (!$_SESSION){
 
 	<div class="container-fluid">
 
-			<div class="jumbotron text-center" style="justify-content: center;padding-bottom: 5px;background-color: #00ff7f;font-family: Gadget">
+			<div class="jumbotron text-center" style="justify-content: center;padding-bottom: 5px;background-color: #B2DFDB;font-family: Gadget">
 					<h1 class="display-3">Servicios</h1>
 			</div>
 			<div class="row text-center" style="justify-content: center;">

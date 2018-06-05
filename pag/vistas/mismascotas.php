@@ -50,7 +50,7 @@ if (!$_SESSION){
 
 
 <!--contenido-->
-<body style="background-color: #9aff56">
+<body style="background-color: #F8FCFD">
 	<div class="container-fluid">
 		<div class="row" style="margin-top: 80px">
 			<div class="col-md-5">
@@ -65,7 +65,7 @@ if (!$_SESSION){
 	        </div>
 		</div>
   </div>
-		<div class="container-fluid" style="margin-top: 30px;background-image: url(../../img/mismascotas.jpg); background-repeat: no-repeat; background-size: 100% 100%">
+		<div class="container-fluid" style="margin-top: 30px;background-color: #E0F2F1; background-repeat: no-repeat; background-size: 100% 100%">
 			<?php 
 			include($_SERVER['DOCUMENT_ROOT']."/conexionbd/abrir_conexion.php"); 
 
@@ -110,7 +110,7 @@ if (!$_SESSION){
 				elseif($fila[tipo]==2) {
 					echo "Gato<br>";
 				}*/
-				echo "<div style='display: inline-block;  padding: 10px; background-color:rgba(169, 211, 209,0.5)'>";
+				echo "<div style='display: inline-block;  padding: 5px; background-color:rgba(169, 211, 209,0.5)'>";
 				echo "Raza: $fila[raza] <br>";
 				echo "Edad: $fila[edad] años <br>";
 				echo "Genero: ";

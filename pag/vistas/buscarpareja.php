@@ -27,7 +27,7 @@ if (!$_SESSION){
 
 <!--contenido-->
 
-<body style="background-image: url(../img/heart.jpg">
+<body style="background-color:#EBEFF0">
 
 	<div class="container-fluid">
 		<div class="row">

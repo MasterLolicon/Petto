@@ -29,7 +29,7 @@ if (!$_SESSION){
 <!--contenido-->
 
 	<div class="container-fluid" style="margin-top: 55px">
-			<div class="jumbotron text-center" style="justify-content: center; padding-bottom: 5px;padding-top: 5px; background-color: #00ff7f">
+			<div class="jumbotron text-center" style="justify-content: center; padding-bottom: 5px;padding-top: 5px; background-color:#B2DFDB">
 					<h1 class="display-3" style="font-family: Gadget">Servicios</h1>
 					</div>
 			<div class="row text-center" style="justify-content: center;font-family: Verdana">

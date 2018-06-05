@@ -49,11 +49,11 @@ if (!$_SESSION){
 	 }
 	}
 </script> 
-<body style="background-color: #00ff37">
+<body style="background-color: #EBEFF0">
 
 	<div class="container-fluid" style="margin-top: 60px">
-			<div class="jumbotron text-center" style="background-image: url(../../img/adop.jpeg); background-size: 100% 175%;background-position: 0px 220px">
-				<h1 class="display-3" style="color: #ffffff">Adopci&oacute;n</h1>
+			<div class="jumbotron text-center" style="background-color:#F8FCFD; background-size: 100% 175%;background-position: 0px 220px">
+				<h1 class="display-3" style="color: #626A6A">Adopci&oacute;n</h1>
 			</div>
 			<h3>Busqueda personalizada</h3>
 				<div class="col-md-3" style="display: inline-block;">
@@ -467,7 +467,7 @@ if (!$_SESSION){
 
 		</div>
 
-		<div class="container-fluid" style="background-image: url(../../img/green2.jpg); ">
+		<div class="container-fluid" style="background-color:#C8E6C9; ">
 			<?php 
 			include($_SERVER['DOCUMENT_ROOT']."/conexionbd/abrir_conexion.php"); 
 

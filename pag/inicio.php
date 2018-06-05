@@ -28,18 +28,18 @@ $usuario= $resultado_obtenido['usuario'];
  <script type="text/javascript" src="./js/jquery.js"></script>
  <script type="text/javascript" src="./js/popper.min.js"></script>
  <script type="text/javascript" src="./js/bootstrap.js"></script>
-<body style="background-color: #ff4444">
+<body style="background-color: #F8FCFD">
 <!--barra de navegacion-->
 <?php include('estructura/header.php'); ?>
 
 <!--contenido-->
 	<div class="container-fluid" style="margin-top: 100px">
-		<div class="jumbtron text-center" style="color: #ffffff; justify-content: center">
+		<div class="jumbtron text-center" style="color: #7f8c8d; justify-content: center">
 		<h1 class="display-3" style="font-family: impact">Bienvenido <?php echo $usuario;?> <div style="width: 100px; height: 100px; background-image: url(../img/bienv.jpg); background-size: cover; display: inline-block;"></div>
   </div></h1>
 		
   </div>
-		<div class="row" style="margin-top: 60px; background-image: url(../img/inicio2.png); background-size: 100% 100%; background-repeat: no-repeat;" >
+		<div class="row" style="margin-top: 60px; background-color:#bdc3c7; background-size: 100% 100%; background-repeat: no-repeat;" >
             <div class="col-lg-6" >
             <div class="text-center" style="background-color: rgba(176, 184, 196,0.8)"><h3 style="font-size: 35px; font-family: Arial-black" >Nuevas mascotas disponibles</h3></div>
 			<?php

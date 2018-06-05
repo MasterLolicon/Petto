@@ -24,9 +24,9 @@ if (!$_SESSION){
  <script type="text/javascript" src="../js/bootstrap.js"></script>
 
 <!--contenido-->
-<body style="background-image: url(../img/heart.jpg">
+<body style="background-color: #EBEFF0;">
 	<div class="container-fluid">
-		<div class="row" style="margin-top: 80px; background-color: rgba(255, 0, 225,0.7); color: #FFFFFF">
+		<div class="row" style="margin-top: 80px; background-color: #F06292; color: #FFFFFF">
 			<div class="col-md-8" >
 				<h1 style="font-family: Impact">Mascotas disponibles para emparejar</h1>
 				<h4 style="font-family: Courier">Busca al compañero ideal para tu mascota</h4>
