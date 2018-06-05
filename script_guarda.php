@@ -1,9 +1,9 @@
 <?php
 
-include("conexionbd/abrir_conexion.php");
-
-include("validate/anti.php"); 
-//
+	include("conexionbd/abrir_conexion.php");
+	// AntiHTML & SQL Injection
+	include("validate/anti.php");
+	
 	$nombre= $_POST['nombre'];
 	$apepat= $_POST['apepat'];
 	$apemat= $_POST['apemat'];

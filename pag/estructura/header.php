@@ -20,23 +20,22 @@
   <ul class="nav navbar-nav">
 
    <a class="navbar-brand" href="http://localhost/Petto/pag/inicio.php">
-    <img src="http://localhost/Petto/pag/img/petto.png" alt="logo" style="width: 40px">
+    <img src="../img/petto.png" alt="logo" style="width: 40px">
   </a>
   <li>
    <a class="nav-link" href="http://localhost/Petto/pag/vistas/mismascotas.php" style="color: #E0F7FA">Mis Mascotas</a>
    </li>
-   
+
    <li class="nav-item">
     <a class="nav-link" href="http://localhost/Petto/pag/vistas/servicios.php" style="color: #E0F7FA">Servicios</a>
    </li>
    <li class="nav-item">
     <a class="nav-link" href="http://localhost/Petto/pag/vistas/buscarmascota.php" style="color: #E0F7FA">Centro de Adopción</a>
    </li>
-   <li class="n
    <li class="nav-item">
     <a class="nav-link" href="http://localhost/Petto/pag/vistas/emparejarmascota.php" style="color: #E0F7FA">Emparejar Mascotas</a>
    </li>
-    
+
     <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="" id="mascotas" data-toggle="dropdown" style="color: #E0F7FA">Perfil</a>
      <div class="dropdown-menu ">

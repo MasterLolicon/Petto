@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="shortcut icon" href="/pag/estructura/favicon.ico">
+    <link rel="shortcut icon" href="./pag/estructura/favicon.ico">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,37 +12,52 @@
     <title>Petto</title>
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="pag/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="pag/css/login.css">
-    <script src="pag/js/jquery.js"></script>
-    <script type="text/javascript" src="pag/popper-js"></script>
-  	<script src="pag/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="./pag/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./pag/css/login.css">
+    <script src="./pag/js/jquery.js"></script>
+    <script type="./text/javascript" src="./pag/popper-js"></script>
+  	<script src="./pag/js/bootstrap.js"></script>
     <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="./vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- Theme CSS -->
-    <link href="css/agency.min.css" rel="stylesheet">
+    <link href="./css/agency.min.css" rel="stylesheet">
 
 <script>
     function validar(){
-        if(document.registro.nombre.value.length==0){
-                alert("Debe ingresar su nombre")
-                document.registro.nombre.focus()
-                return 0;
-            }
-
-        if(document.registro.correo.value.length==0){
-                alert("Debe ingresar su email")
-                document.registro.correo.focus()
-                return 0;
-            }
-
-        document.registro.submit();
+				var palabrasProhibidas = [
+					'feo','tonto','pendejo','estupido',
+					'idiota','ctm','puto','puta','vagina',
+					'stupid','verga','hdp','jodete','chinga',
+					'chingar','cojer','chingada','ojete','pene',
+				];
+				while(nProhibidas--) {
+				 if (document.registro.nombre.value.indexOf(palabrasProhibidas[nProhibidas])!=-1) {
+						 //si detecta alguna manda alv al usuario hasta que meta algo bien
+						 alert("Perdon, el sistema no acepta malas palabras!!");
+						 return 0;
+				 }else if(document.registro.usuario.value.indexOf(palabrasProhibidas[nProhibidas])!=-1){
+						 //si detecta alguna manda alv al usuario hasta que meta algo bien
+						 alert("Perdon, el sistema no acepta malas palabras!!");
+						 return 0;
+				 }else if (document.registro.apepat.value.indexOf(palabrasProhibidas[nProhibidas])!=-1) {
+						 //si detecta alguna manda alv al usuario hasta que meta algo bien
+	 					alert("Perdon, el sistema no acepta malas palabras!!");
+	 					return 0;
+				 }else if (document.registro.apemat.value.indexOf(palabrasProhibidas[nProhibidas])!=-1) {
+						 //si detecta alguna manda alv al usuario hasta que meta algo bien
+	 					alert("Perdon, el sistema no acepta malas palabras!!");
+	 					return 0;
+				 }else{
+					 document.registro.submit();
+				 }
+				}
     }
 </script>
+
 </head>
 
 <body id="page-top" class="index">
@@ -51,7 +66,7 @@
     <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #96d2bb; z-index:1 ;">
   <!--<a class="navbar-brand" href="#">Petto</a>-->
   <a class="navbar-brand" href="">
-    <img src="pag/img/petto.png" alt="logo" style="width: 40px">
+    <img src="./pag/img/petto.png" alt="logo" style="width: 40px">
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" >
     <span class="navbar-toggler-icon"></span>
@@ -69,11 +84,11 @@
  </nav>
 
     <!-- Header -->
-    <div class="container" style="background-image: url('pag/img/back.jpeg'); background-repeat: no-repeat; background-size: cover; max-width: 100%;max-height: 100%; overflow: auto; " id="main">
+    <div class="container" style="background-image: url('./pag/img/back.jpeg'); background-repeat: no-repeat; background-size: cover; max-width: 100%;max-height: 100%; overflow: auto; " id="main">
   <div class="row" style="height: 100%;">
    <div class="col-sm-4"></div>
   <div class="jumbotron col-sm-4 text-center" style="margin-bottom: 10%; margin-top: 10%; opacity: 0.8;">
-  <img src="pag/img/petto.png" style="width: 80%;">
+  <img src="./pag/img/petto.png" style="width: 80%;">
   <p>Centro de Apoyo a dueños de mascotas</p>
 
   <button type="button" class="btn btn-primary" onclick="document.getElementById('id01').style.display='block';document.getElementById('page-top').style.overflow='hidden'" style="width:auto;">Entrar</button>
@@ -292,11 +307,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
 
     <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <script src="./js/jqBootstrapValidation.js"></script>
+    <script src="./js/contact_me.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="js/agency.min.js"></script>
+    <script src="./js/agency.min.js"></script>
 
 </body>
 
