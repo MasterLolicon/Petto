@@ -79,10 +79,10 @@ if (!$_SESSION){
 					$disprep= $resultado8_obtenido['disp_rep'];
 
 					echo "<div class='jumbotron' style='padding-bottom: 20px;padding-top:5px'>";
-					echo "El usuario $fila[nombre] $fila[apepat] $fila[apemat] Ha solicitado para";
+					echo "El usuario $fila[nombre] $fila[apepat] $fila[apemat] ha solicitado para";
 					if ($fila[tipo]==1) {
-						echo " <span class='label label-primary'>adopción</span>";
-						echo " A tu mascota $mascota";
+						echo " <span class='badge badge-primary'>adopción</span>";
+						echo " A tu mascota <span class='badge badge-dark'> $mascota</span>";
 						if ($dispadop==2) {
 							echo "<form action='aceptarnotificacion.php' role='form' name='frm_ingreso' method='post'>
 								<input class='form-control' type='hidden' name='mascota' id='mascota' value='$fila[mascota]' />
@@ -93,7 +93,7 @@ if (!$_SESSION){
 							//echo "</td>";
 							}
 						elseif ($dispadop==1) {
-							echo " pero tu mascota ya no está disponible, si te arrepentiste de tu decisión puedes ir a <a href='mismascotas.php'>Mis Mascotas<a> y cambiar el estado de tu mascota a Disponible.";
+							echo " pero tu mascota ya no está disponible, si te arrepentiste de tu decisión puedes ir a <a href='mismascotas.php'>Mis Mascotas<a> y cambiar el estado de tu mascota a <span class='badge badge-success'>Disponible.</span>";
 						}
 
 					}
@@ -137,9 +137,9 @@ if (!$_SESSION){
 		
 
 		
-			<div class="col-md-2 float-right" style="justify-content: center;">
+			<!--<div class="col-md-2 float-right" style="justify-content: center;">
 				<h3 class="btn-success" >Aceptado</h3>
-			</div>
+			</div>-->
 			
 	</div></div>
 		<div class="jumbotron">

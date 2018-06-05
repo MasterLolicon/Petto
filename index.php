@@ -32,7 +32,8 @@
 					'feo','tonto','pendejo','estupido',
 					'idiota','ctm','puto','puta','vagina',
 					'stupid','verga','hdp','jodete','chinga',
-					'chingar','cojer','chingada','ojete','pene',
+					'chingar','cojer','chingada','ojete','pene','culo','coño','fuck','nigga',
+          'imbecil','imbécil','tarado','wey'
 				];
 				while(nProhibidas--) {
 				 if (document.registro.nombre.value.indexOf(palabrasProhibidas[nProhibidas])!=-1) {
