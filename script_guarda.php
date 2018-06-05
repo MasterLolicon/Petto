@@ -1,6 +1,8 @@
 <?php
 
-include("conexionbd/abrir_conexion.php"); 
+include("conexionbd/abrir_conexion.php");
+
+include("validate/anti.php"); 
 //
 	$nombre= $_POST['nombre'];
 	$apepat= $_POST['apepat'];
@@ -10,10 +12,10 @@ include("conexionbd/abrir_conexion.php");
 	$contrasenia= $_POST['contrasenia'];
 	$ubicacion= $_POST['ubicacion'];
 
-	$conexion->query("INSERT INTO $tablaus (nombre,apepat,apemat,usuario,correo,contrasenia,id_ubicacion) values ('$nombre','$apepat','$apemat','$usuario','$correo','$contrasenia','$ubicacion')"); 
+	$conexion->query("INSERT INTO $tablaus (nombre,apepat,apemat,usuario,correo,contrasenia,id_ubicacion) values ('$nombre','$apepat','$apemat','$usuario','$correo','$contrasenia','$ubicacion')");
 
 	header("location:index.php");
-	mysql_close($conexion); 
+	mysql_close($conexion);
 
 
 ?>
