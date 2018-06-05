@@ -128,7 +128,7 @@ if (!$_SESSION){
 		</div>	
 		<div class="row"><p>&nbsp;</p></div>			
 		<div class="row"><p>&nbsp;</p></div>
-		<a href="emparejarmascota.php" class="btn btn-primary btn-lg" data-toggle="modal">Volver</a>
+		<a href="emparejarmascota.php" class="btn btn-primary btn-lg">Volver</a>
 	</div>
 	<?php include('../estructura/footer.php'); ?>
 
