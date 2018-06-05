@@ -20,7 +20,7 @@ session_start();
 
 
 	//Ruta de la carpeta imagenes
-	$carpeta_destino=$_SERVER['DOCUMENT_ROOT']."/pag/vistas/foto_mascota/";
+	$carpeta_destino="foto_mascota/";
 
 	//Validación del archivo
 

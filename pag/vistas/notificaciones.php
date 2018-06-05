@@ -93,7 +93,7 @@ if (!$_SESSION){
 							//echo "</td>";
 							}
 						elseif ($dispadop==1) {
-							echo "<br>Mascota ya no disponible";
+							echo " pero tu mascota ya no está disponible, si te arrepentiste de tu decisión puedes ir a <a href='mismascotas.php'>Mis Mascotas<a> y cambiar el estado de tu mascota a Disponible.";
 						}
 
 					}
@@ -168,17 +168,22 @@ if (!$_SESSION){
 
 					//echo "<td>";
 					echo "El usuario $nombreus Ha a aceptado tu solicitud para su mascota $fila[mascota]<br>";
-					echo "Contactate con el: $fila[correo]";
+					echo "Contactate con el: $fila[correo]<br><br>";
 
 					$contador++;
 			}//echo "</tr></table>";
 			echo "<div class='jumbotron'>";
 			if ($contador==1) {
-				echo "<br><span class='label label-info' >1 Notificación</span>";
+				echo "<br><span class='label label-info' $contador Notificación</span>";
 			}
 			elseif ($contador>1) {
 				echo "<br>$contador Notificaciones";
 			}
+
+			#BORRAR NOTIFICACIONES
+			echo "<form action='borrarnotificaciones.php' role='form' name='frm_ingreso' method='post'>
+								<input class='btn btn-xl' name='Submit' type='submit' value='Borrar notificaciones'>
+								</form>";
 			echo "</div>";
 			
 			?>

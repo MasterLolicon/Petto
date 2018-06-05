@@ -452,11 +452,17 @@ if (!$_SESSION){
 					    </div> 
 				</div>
 
+
+
 				<div class="col-md-3">
 	     				<input class="btn btn-success" name="Submit" type="submit" value="Busqueda">     
 				</div>  
                    				    <br>
+
 				</form>
+				<div class="col-md-12" style="display: inline-block;">
+					<h4>¿Quieres buscarle un hogar a un amigo?</h4><p>Accede a<a href="mismascotas.php"> Mis mascotas </a>y cambia el estado de la mascota deseada para poner en adopción</p>
+				</div> 
 				</div>
 
 		</div>
