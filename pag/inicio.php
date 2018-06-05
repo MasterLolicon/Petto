@@ -1,43 +1,33 @@
 <?php
 //Proceso de conexión con la base de datos
 include("../conexionbd/abrir_conexion.php");
-
 //Iniciar Sesión
 session_start();
-
 //Validar si se está ingresando con sesión correctamente
 if (!$_SESSION){
-	header("location: http://localhost/Petto/index.php");
+	header("location: /");
+}else{
+	$id_usuario= $_SESSION['id_usuario'];
+	$consulta="SELECT usuario FROM usuarios WHERE id='$id_usuario'";
+	$resultado=mysqli_query($conexion,$consulta) or die(mysqli_error($conexion));
+	$resultado_obtenido=mysqli_fetch_array($resultado);
+	$usuario= $resultado_obtenido['usuario'];
 }
 
-$id_usuario= $_SESSION['id_usuario'];
-
-$consulta="SELECT usuario FROM usuarios WHERE id='$id_usuario'";
-$resultado=mysqli_query($conexion,$consulta) or die(mysqli_error($conexion));
-$resultado_obtenido=mysqli_fetch_array($resultado);
-$usuario= $resultado_obtenido['usuario'];
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" href="./css/bootstrap.css"/>
- <link rel="stylesheet" type="text/css" href="./css/avatar.css">
- <script type="text/javascript" src="./js/jquery.js"></script>
- <script type="text/javascript" src="./js/popper.min.js"></script>
- <script type="text/javascript" src="./js/bootstrap.js"></script>
-<body style="background-color: #F8FCFD">
-<!--barra de navegacion-->
-<?php include('estructura/header.php'); ?>
+<!-- head y barra de navegacion-->
+<?php include('./estructura/header_index.php'); ?>
 
+
+<body style="background-color: #F8FCFD">
 <!--contenido-->
 	<div class="container-fluid" style="margin-top: 100px">
 		<div class="jumbtron text-center" style="color: #7f8c8d; justify-content: center">
 		<h1 class="display-3" style="font-family: impact">Bienvenido <?php echo $usuario;?> <div style="width: 100px; height: 100px; background-image: url(../img/bienv.jpg); background-size: cover; display: inline-block;"></div>
   </div></h1>
-		
+
   </div>
 		<div class="row" style="margin-top: 60px; background-color:#bdc3c7; background-size: 100% 100%; background-repeat: no-repeat;" >
             <div class="col-lg-6" >
@@ -119,6 +109,6 @@ echo "</div>";
         </div>
 	</div>
 </div>
-	<?php include('estructura/footer.php'); ?>
+	<?php include('./estructura/footer.php'); ?>
 </body>
 </html>

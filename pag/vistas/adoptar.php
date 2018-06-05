@@ -1,6 +1,6 @@
 <?php
 
-  include("../../conexionbd/abrir_conexion.php"); 
+  include("../../conexionbd/abrir_conexion.php");
 
 
 
@@ -8,14 +8,14 @@
   session_start();
 
   if (!$_SESSION){
-  header("location:../../index.php"); 
+  header("location:../../index.php");
 }
   $id_usuario= $_SESSION['id_usuario'];
 
   $emisor = $_POST['emisor'];
   $receptor= $_SESSION['id_usuario'];
   $mascota = $_POST['mascota'];
-  $tipo = $_POST['tipo']; // Con este sabremos si hablamos de Adopción o Reproducción 
+  $tipo = $_POST['tipo']; // Con este sabremos si hablamos de Adopción o Reproducción
   $mascotaemisor = $_POST['mascotaemisor'];
 
 $query = "SELECT * FROM usuarios WHERE id='$id_usuario'";
@@ -32,10 +32,10 @@ $query = "SELECT * FROM usuarios WHERE id='$id_usuario'";
 
   echo $nombre;
 
-  $conexion->query("INSERT INTO $tablanot (emisor,nombre,apepat,apemat,receptor,tipo,mascota,mascotaemisor) values ('$receptor','$nombre','$apepat','$apemat','$emisor','$tipo','$mascota','$mascotaemisor')"); 
+  $conexion->query("INSERT INTO $tablanot (emisor,nombre,apepat,apemat,receptor,tipo,mascota,mascotaemisor) values ('$receptor','$nombre','$apepat','$apemat','$emisor','$tipo','$mascota','$mascotaemisor')");
 
-  header("location:http://localhost/Petto/pag/vistas/mismascotas.php");
- 
+  header("location:/pag/vistas/mismascotas.php");
 
-  
+
+
 ?>
