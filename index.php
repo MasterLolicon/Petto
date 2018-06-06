@@ -28,14 +28,18 @@
 
 <script>
     function validar(){
+
 				var palabrasProhibidas = [
 					'feo','tonto','pendejo','estupido',
 					'idiota','ctm','puto','puta','vagina',
 					'stupid','verga','hdp','jodete','chinga',
 					'chingar','cojer','chingada','ojete','pene','culo','coño','fuck','nigga',
-          'imbecil','imbécil','tarado','wey'
+          'imbecil','imbécil','tarado','wey','madre'
 				];
-				var nProhibidas = legend(palabrasProhibidas);
+				console.log("palabras prohibidad: ");
+				console.log(palabrasProhibidas);
+				var nProhibidas = palabrasProhibidas.length;
+				console.log("n prohibidad: " + nProhibidas);
 				while(nProhibidas--) {
 				 if (document.registro.nombre.value.indexOf(palabrasProhibidas[nProhibidas])!=-1) {
 						 //si detecta alguna manda alv al usuario hasta que meta algo bien
@@ -112,7 +116,6 @@
     </div>
 
     <div class="container">
-
       <label for="nombre"><b>Nombre</b></label>
       <input type="text" class="form-control" placeholder="Nombre" name="nombre" id="nombre" required>
 
