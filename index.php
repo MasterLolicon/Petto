@@ -35,6 +35,7 @@
 					'chingar','cojer','chingada','ojete','pene','culo','coño','fuck','nigga',
           'imbecil','imbécil','tarado','wey'
 				];
+				var nProhibidas = legend(palabrasProhibidas);
 				while(nProhibidas--) {
 				 if (document.registro.nombre.value.indexOf(palabrasProhibidas[nProhibidas])!=-1) {
 						 //si detecta alguna manda alv al usuario hasta que meta algo bien
