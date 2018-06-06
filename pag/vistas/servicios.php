@@ -22,7 +22,31 @@ if (!$_SESSION){
  <script type="text/javascript" src="../js/jquery.js"></script>
  <script type="text/javascript" src="../js/popper.min.js"></script>
  <script type="text/javascript" src="../js/bootstrap.js"></script>
-
+<script>
+    function validar(){
+				var palabrasProhibidas = [
+					'feo','tonto','pendejo','estupido',
+					'idiota','ctm','puto','puta','vagina',
+					'stupid','verga','hdp','jodete','chinga',
+					'chingar','cojer','chingada','ojete','pene','culo','coño','fuck','nigga',
+          'imbecil','imbécil','tarado','wey'
+				];
+				while(nProhibidas--) {
+				 if (document.registro.nombre.value.indexOf(palabrasProhibidas[nProhibidas])!=-1) {
+						 //si detecta alguna manda alv al usuario hasta que meta algo bien
+						 alert("Perdon, el sistema no acepta malas palabras!!");
+						 return 0;
+				 }else if (document.registro.descripcion.value.indexOf(palabrasProhibidas[nProhibidas])!=-1) {
+						 //si detecta alguna manda alv al usuario hasta que meta algo bien
+						 alert("Perdon, el sistema no acepta malas palabras!!");
+						 return 0;
+				 }else{
+					 document.registro.submit();
+				 }
+				 }
+				}
+    
+   </script>
 <!--barra de navegacion-->
 <?php include('../estructura/header.php'); ?>
 

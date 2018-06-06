@@ -7,7 +7,7 @@ session_start();
 $id_usuario= $_SESSION['id_usuario'];
 //Validar si se está ingresando con sesión correctamente
 if (!$_SESSION){
-	header("location: http://localhost/Petto/index.php");
+	header("location: /Petto/index.php");
 }
 
 
@@ -46,7 +46,26 @@ if (!$_SESSION){
 	 }
 	}
 </script> 
-
+<script>
+    function validar(){
+				var palabrasProhibidas = [
+					'feo','tonto','pendejo','estupido',
+					'idiota','ctm','puto','puta','vagina',
+					'stupid','verga','hdp','jodete','chinga',
+					'chingar','cojer','chingada','ojete','pene','culo','coño','fuck','nigga',
+          'imbecil','imbécil','tarado','wey'
+				];
+				while(nProhibidas--) {
+				 if (document.registro.nombre.value.indexOf(palabrasProhibidas[nProhibidas])!=-1) {
+						 //si detecta alguna manda alv al usuario hasta que meta algo bien
+						 alert("Perdon, el sistema no acepta malas palabras!!");
+						 return 0;
+				 }else{
+					 document.registro.submit();
+				 }
+				}
+    }
+</script>
 
 
 <!--contenido-->
@@ -606,7 +625,7 @@ if (!$_SESSION){
                             <input type="file" name="imagen" size="100"></td>
                         </td>
 					    </div>   
-		                    <input class="btn btn-success" name="Submit" type="submit" value="Registro">                   				    
+		                    <button class="btn btn-success" name="Submit" type="submit" onclick="validar()">Registro</button>                   				    
 					</form>
 
         			</div>
