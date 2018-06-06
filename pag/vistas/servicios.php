@@ -144,7 +144,7 @@ if (!$_SESSION){
 			
 					echo "<p class='card-text'>Contacto: $fila[contacto]</p>";
 					echo "<p class='card-text'>Calificación:</p>" ;
-					echo "<h3 style='color: #e5ff00;'>";for($i=1;$i<$fila[promcal];$i++){
+					echo "<h3 style='color: #e5ff00;'>";for($i=1;$i<=$fila[promcal];$i++){
 						echo "&#9733 ";
 					}
 					echo"</h3>";
