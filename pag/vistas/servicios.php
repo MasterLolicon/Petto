@@ -223,12 +223,12 @@ if (!$_SESSION){
 
 					    <div class="form-group"> <!-- Full Name -->
 					        <label for="full_name_id" class="control-label">Nombre</label>
-					        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Petco">
+					        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Petco" required>
 					    </div>    
 
 					    <div class="form-group"> <!-- Street 1 -->
 					        <label for="street1_id" class="control-label">Descripción</label>
-					        <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Adopción, accesorios y más">
+					        <input type="text" class="form-control" id="descripcion" name="descripcion" placeholder="Adopción, accesorios y más" required>
 					    </div>    
 
 					    <div class="form-group"> <!-- State Button -->
@@ -245,14 +245,14 @@ if (!$_SESSION){
 
 					    <div class="form-group"> <!-- Street 2 -->
 							<div class="fileinput fileinput-new" data-provides="fileinput">
-    							<span class="btn btn-default btn-file"><input type="file" name="foto"/></span>
+    							<span class="btn btn-default btn-file"><input type="file" name="foto" required /></span>
     							<span class="fileinput-filename"></span>
 							</div>
 					    </div>    
 
 					    <div class="form-group"> <!-- City-->
 					        <label for="city_id" class="control-label">Contacto (email/telefono/etc.)</label>
-					        <input type="text" class="form-control" id="contacto" name="contacto" placeholder="Smallville">
+					        <input type="text" class="form-control" id="contacto" name="contacto" placeholder="Smallville" required>
 					    </div> 
 		                    <input class="btn btn-xl" name="Submit" type="submit" value="Registro">                   				    
 					</form>

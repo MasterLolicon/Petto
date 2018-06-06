@@ -230,7 +230,7 @@ if (!$_SESSION){
 
 					    <div class="form-group"> <!-- Full Name -->
 					        <label for="full_name_id" class="control-label">Nombre</label>
-					        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Petco">
+					        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Petco" required>
 					    </div>   
 
 					    <div class="form-group"> <!-- State Button -->
@@ -607,7 +607,7 @@ if (!$_SESSION){
 
 					    <div class="form-group"> <!-- Street 1 -->
 					        <label for="street1_id" class="control-label">Edad(en años)</label>
-					        <input type="text" class="form-control" id="edad" name="edad" placeholder="2">
+					        <input type="text" class="form-control" id="edad" name="edad" placeholder="2" required>
 					    </div> 
 
 					    <div class="form-group"> <!-- State Button -->
@@ -622,7 +622,7 @@ if (!$_SESSION){
                             <label for="imagen">Cargar imagen:</label>
                         </td>
                         <td>
-                            <input type="file" name="imagen" size="100"></td>
+                            <input type="file" name="imagen" size="100" required></td>
                         </td>
 					    </div>   
 		                    <button class="btn btn-success" name="Submit" type="submit" onclick="validar()">Registro</button>                   				    
