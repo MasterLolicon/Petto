@@ -254,12 +254,12 @@ if (!$_SESSION){
 					        <label for="city_id" class="control-label">Contacto (email/telefono/etc.)</label>
 					        <input type="text" class="form-control" id="contacto" name="contacto" placeholder="Smallville" required>
 					    </div> 
-		                    <input class="btn btn-xl" name="Submit" type="submit" value="Registro">                   				    
+		                    <input class="btn btn-success" name="Submit" type="submit" value="Registro">                   				    
 					</form>
 
         		<!-- Footer ventana -->
         			<div class="modal-footer">
-        				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        				<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
         			</div>
 
         		</div>

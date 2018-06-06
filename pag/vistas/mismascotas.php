@@ -235,7 +235,7 @@ if (!$_SESSION){
 
 					    <div class="form-group"> <!-- State Button -->
 					        <label for="state_id" class="control-label">Tipo</label>
-					        <select class="form-control" id="tipo" name="tipo" onchange="cambiotipo(this)" placeholder="tipo">
+					        <select class="form-control" id="tipo" name="tipo" onchange="cambiotipo(this)" placeholder="tipo" required>
 					            <option name="" value="">Seleccion tipo de mascota</option> 
 					            <option value="1">Perro</option>
 					            <option value="2">Gato</option>
@@ -243,7 +243,7 @@ if (!$_SESSION){
 					    </div>   
  
 
-					    <div class="form-group"> <!-- Street 1 -->
+					    <div class="form-group" > <!-- Street 1 -->
 					        <label for="street1_id" class="control-label">Raza</label>
 					  <select class="form-control" id="perro" name="raza" disabled="true">
 					  	<option value="Ninguna(Cruza)">Ninguna(Cruza)</option>
@@ -558,7 +558,7 @@ if (!$_SESSION){
 								<option value="Yorkshire Terrier">Yorkshire Terrier</option>									
 					  </select>
 
-					  <select class="form-control" id="gato" name="raza" disabled="true" >
+					  <select class="form-control" id="gato" name="raza" disabled="true">
 					  	<option value="Ninguna(Cruza)">Ninguna(Cruza)</option>
 					   <option value="Abisinio">Abisinio</option>
 								<option value="Amercian Curl">Amercian Curl</option>
