@@ -28,11 +28,13 @@
 
 <script>
     function validar(){
+			var registra = 0;
 
 				var palabrasProhibidas = [
-					'feo','tonto','pendejo','estupido',
-					'idiota','ctm','puto','puta','vagina',
-					'stupid','verga','hdp','jodete','chinga',
+					'feo','tonto','pendejo','estupido','alv','putos','putas'
+					'idiota','ctm','puto','puta','vagina','bitch','pito'
+					'stupid','verga','hdp','jodete','chinga','madre','whore',':v','xD'.'XD','xd',
+					'cock','slut','pucha','panocha','teta','dick','conchetumare','tumama'
 					'chingar','cojer','chingada','ojete','pene','culo','coño','fuck','nigga',
           'imbecil','imbécil','tarado','wey','madre'
 				];
@@ -43,22 +45,30 @@
 				while(nProhibidas--) {
 				 if (document.registro.nombre.value.indexOf(palabrasProhibidas[nProhibidas])!=-1) {
 						 //si detecta alguna manda alv al usuario hasta que meta algo bien
+						 registra = registra + 1;
 						 alert("Perdon, el sistema no acepta malas palabras!!");
 						 return 0;
 				 }else if(document.registro.usuario.value.indexOf(palabrasProhibidas[nProhibidas])!=-1){
 						 //si detecta alguna manda alv al usuario hasta que meta algo bien
+						 registra = registra + 1;
 						 alert("Perdon, el sistema no acepta malas palabras!!");
 						 return 0;
 				 }else if (document.registro.apepat.value.indexOf(palabrasProhibidas[nProhibidas])!=-1) {
 						 //si detecta alguna manda alv al usuario hasta que meta algo bien
-	 					alert("Perdon, el sistema no acepta malas palabras!!");
+						 registra = registra + 1;
+						alert("Perdon, el sistema no acepta malas palabras!!");
 	 					return 0;
 				 }else if (document.registro.apemat.value.indexOf(palabrasProhibidas[nProhibidas])!=-1) {
 						 //si detecta alguna manda alv al usuario hasta que meta algo bien
-	 					alert("Perdon, el sistema no acepta malas palabras!!");
+						 registra = registra + 1;
+						alert("Perdon, el sistema no acepta malas palabras!!");
 	 					return 0;
-				 }else{
+				 }
+				 if(registra == 0){
 					 document.registro.submit();
+				 }else{
+					 alert("Perdon, el sistema no acepta malas palabras!!");
+					 return 0;
 				 }
 				}
     }
