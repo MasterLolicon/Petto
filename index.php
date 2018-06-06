@@ -28,49 +28,74 @@
 
 <script>
     function validar(){
-			var registra = 0;
-
-				var palabrasProhibidas = [
-					'feo','tonto','pendejo','estupido','alv','putos','putas'
-					'idiota','ctm','puto','puta','vagina','bitch','pito'
-					'stupid','verga','hdp','jodete','chinga','madre','whore',':v','xD'.'XD','xd',
-					'cock','slut','pucha','panocha','teta','dick','conchetumare','tumama'
+			// alert("Holi!!");
+			console.log("entrando a validar");
+			var count= 0;
+			var palabrasProhibidas = [
+					'feo','tonto','pendejo','estupido','alv','putos','putas',
+					'idiota','ctm','puto','puta','vagina','bitch','pito',
+					'stupid','verga','hdp','jodete','chinga','madre','whore',':v','xd',
+					'cock','slut','pucha','panocha','teta','dick','conchetumare','tumama',
 					'chingar','cojer','chingada','ojete','pene','culo','coño','fuck','nigga',
-          'imbecil','imbécil','tarado','wey','madre'
+          'imbecil','imbécil','tarado','wey','madre',
 				];
-				console.log("palabras prohibidad: ");
-				console.log(palabrasProhibidas);
+				var usuario = document.registro.nombre.value.toLowerCase();
+				var nombre = document.registro.usuario.value.toLowerCase();
+				var apepat = document.registro.apepat.value.toLowerCase();
+				var apemat = document.registro.apemat.value.toLowerCase();
+				var correo = document.registro.correo.value.toLowerCase();
+				console.log(usuario);
+				console.log(nombre);
+				console.log(apepat);
+				console.log(apemat);
+				console.log(correo);
 				var nProhibidas = palabrasProhibidas.length;
-				console.log("n prohibidad: " + nProhibidas);
 				while(nProhibidas--) {
-				 if (document.registro.nombre.value.indexOf(palabrasProhibidas[nProhibidas])!=-1) {
-						 //si detecta alguna manda alv al usuario hasta que meta algo bien
-						 registra = registra + 1;
-						 alert("Perdon, el sistema no acepta malas palabras!!");
-						 return 0;
-				 }else if(document.registro.usuario.value.indexOf(palabrasProhibidas[nProhibidas])!=-1){
-						 //si detecta alguna manda alv al usuario hasta que meta algo bien
-						 registra = registra + 1;
-						 alert("Perdon, el sistema no acepta malas palabras!!");
-						 return 0;
-				 }else if (document.registro.apepat.value.indexOf(palabrasProhibidas[nProhibidas])!=-1) {
-						 //si detecta alguna manda alv al usuario hasta que meta algo bien
-						 registra = registra + 1;
-						alert("Perdon, el sistema no acepta malas palabras!!");
-	 					return 0;
-				 }else if (document.registro.apemat.value.indexOf(palabrasProhibidas[nProhibidas])!=-1) {
-						 //si detecta alguna manda alv al usuario hasta que meta algo bien
-						 registra = registra + 1;
-						alert("Perdon, el sistema no acepta malas palabras!!");
-	 					return 0;
-				 }
-				 if(registra == 0){
-					 document.registro.submit();
-				 }else{
-					 alert("Perdon, el sistema no acepta malas palabras!!");
-					 return 0;
-				 }
-				}
+					 if (nombre.indexOf(palabrasProhibidas[nProhibidas])!=-1) {
+							 //si detecta alguna manda alv al usuario hasta que meta algo bien
+							 count = count + 1;
+
+							 console.log("Palabra mala detectada: Nombre");
+							 alert("Perdon, el sistema no acepta malas palabras!!");
+							 // return 0;
+					 }else if(usuario.indexOf(palabrasProhibidas[nProhibidas])!=-1){
+							 //si detecta alguna manda alv al usuario hasta que meta algo bien
+							 count = count + 1;
+							 console.log("Palabra mala detectada: Usuario");
+							 alert("Perdon, el sistema no acepta malas palabras!!");
+							 // return 0;
+					 }else if (apepat.indexOf(palabrasProhibidas[nProhibidas])!=-1) {
+							 //si detecta alguna manda alv al usuario hasta que meta algo bien
+							 count = count + 1;
+							 console.log("Palabra mala detectada: Apepat");
+							alert("Perdon, el sistema no acepta malas palabras!!");
+		 					// return 0;
+					 }else if (apemat.indexOf(palabrasProhibidas[nProhibidas])!=-1) {
+							 //si detecta alguna manda alv al usuario hasta que meta algo bien
+							 count = count + 1;
+							 console.log("Palabra mala detectada: Apemat");
+							alert("Perdon, el sistema no acepta malas palabras!!");
+		 					// return 0;
+					 }else if (correo.indexOf(palabrasProhibidas[nProhibidas])!=-1) {
+							 //si detecta alguna manda alv al usuario hasta que meta algo bien
+							 count = count + 1;
+							 console.log("Palabra mala detectada: Correo");
+							alert("Perdon, el sistema no acepta malas palabras!!");
+		 					// return 0;
+					 }
+
+					}
+					console.log("Valor");
+					console.log(count);
+					// alert("Hola 2!!");
+					if(count == 0){
+						document.getElementById("registro").submit();
+						alert("Registro Exitoso!!");
+					}else{
+						alert("No se completo el Registro!!");
+						return 0;
+
+					}
     }
 </script>
 
@@ -108,7 +133,7 @@
   <p>Centro de Apoyo a dueños de mascotas</p>
 
   <button type="button" class="btn btn-primary" onclick="document.getElementById('id01').style.display='block';document.getElementById('page-top').style.overflow='hidden'" style="width:auto;">Entrar</button>
-  <button type="button" class="btn btn-primary" onclick="document.getElementById('id02').style.display='block'; document.getElementById('page-top').style.overflow='hidden';" style="width:auto;">Registrarse</button>
+  <button type="button" class="btn btn-primary" onclick="document.getElementById('id02').style.display='block'; document.getElementById('page-top').style.overflow='hidden';" style="width:auto;">countrse</button>
   </div>
 <div>
  </div>
@@ -117,7 +142,7 @@
 
 
 
-<!--registrar-->
+<!--countr-->
 <div id="id02" class="modal" style="padding-top: 5px; overflow: auto;">
 
   <form class="modal-content animate" id="registro" name="registro" method="post" action="script_guarda.php" style="width: 50%; margin-left: 28%;">
@@ -147,7 +172,7 @@
       <label for="ubicacion" style="display: none;"><b>Ubicacion</b></label>
       <input style="display: none;" type="text" class="form-control" placeholder="ubicacion" name="ubicacion" id="ubicacion" value="1" >
 
-      <button type="submit" name="enviar" onclick="validar();" class="btn btn-primary">Registrar</button>
+      <button name="enviar" onclick="validar();" class="btn btn-primary">Registrar</button>
       </div>
 
     <div class="container" style="background-color:#f1f1f1">
@@ -299,7 +324,7 @@
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4>¡no dejes pasar mas tiempo!
-                                    <br>Registrate y
+                                    <br>countte y
                                     <br>conciente a tu mascota</h4>
                                 </div>
 
